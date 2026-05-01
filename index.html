@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Al Rukam Clean — System Demo</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<title>CleanPro Solo — Booking Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --blue:#1a56db;--blue-d:#1239a5;--blue-l:#2563eb;--blue-ll:#dbeafe;--blue-xs:#eff6ff;
-  --teal:#0891b2;--teal-d:#0c5975;--teal-l:#06b6d4;--teal-ll:#cffafe;--teal-xs:#ecfeff;
+  --emerald:#059669;--emerald-d:#047857;--emerald-l:#10b981;--emerald-xs:#ecfdf5;--emerald-ll:#d1fae5;
   --slate:#0f172a;--slate-m:#1e293b;--slate-l:#334155;
   --neutral:#64748b;--neutral-l:#94a3b8;--neutral-ll:#cbd5e1;
   --border:#e2e8f0;--border-l:#f1f5f9;
   --surface:#ffffff;--bg:#f8fafc;--bg-d:#f1f5f9;
   --green:#059669;--green-l:#d1fae5;--green-xs:#ecfdf5;
   --red:#dc2626;--red-l:#fee2e2;--red-xs:#fef2f2;
-  --amber:#d97706;--amber-l:#fef3c7;
+  --amber:#d97706;--amber-l:#fef3c7;--amber-xs:#fffbeb;
+  --violet:#7c3aed;--violet-xs:#f5f3ff;
   --sh-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
   --sh:0 4px 6px -1px rgba(15,23,42,.07),0 2px 4px -1px rgba(15,23,42,.05);
   --sh-md:0 10px 15px -3px rgba(15,23,42,.08),0 4px 6px -2px rgba(15,23,42,.05);
@@ -26,105 +27,105 @@
 }
 body{
   font-family:'DM Sans',sans-serif;
-  background:#f0f4f8;
-  min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:32px 16px 72px;
+  background:#eef2f7;
+  min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;
+  padding:36px 16px 80px;
   background-image:
-    radial-gradient(ellipse 80% 40% at 50% 0%,rgba(26,86,219,.06) 0%,transparent 70%),
-    radial-gradient(ellipse 60% 30% at 90% 80%,rgba(8,145,178,.05) 0%,transparent 70%);
+    radial-gradient(ellipse 80% 45% at 50% 0%,rgba(26,86,219,.07) 0%,transparent 70%),
+    radial-gradient(ellipse 55% 30% at 85% 85%,rgba(5,150,105,.06) 0%,transparent 70%);
 }
 
-/* ===== PAGE HEADER ===== */
-.ptitle{text-align:center;margin-bottom:40px}
-.ptitle .logo-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:12px}
-.logo-mark{width:48px;height:48px;background:linear-gradient(135deg,var(--blue-d),var(--blue-l));border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 8px 24px rgba(26,86,219,.28),0 0 0 1px rgba(26,86,219,.15)}
-.ptitle h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.75rem;font-weight:800;color:var(--slate);letter-spacing:-0.5px}
-.ptitle h1 em{font-style:normal;color:var(--blue-l)}
-.ptitle p{font-size:.8rem;color:var(--neutral);margin-top:6px;font-weight:400;letter-spacing:.1px}
-.flow-chip{display:inline-flex;align-items:center;gap:8px;margin-top:14px;background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:6px 18px;font-size:.72rem;color:var(--neutral);font-weight:500;box-shadow:var(--sh-sm)}
+/* PAGE TITLE */
+.ptitle{text-align:center;margin-bottom:44px}
+.logo-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:10px}
+.logo-mark{width:50px;height:50px;background:linear-gradient(135deg,var(--blue-d),var(--blue-l));border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 8px 24px rgba(26,86,219,.28),0 0 0 1px rgba(26,86,219,.15)}
+.ptitle h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.85rem;font-weight:900;color:var(--slate);letter-spacing:-0.7px}
+.ptitle h1 em{font-style:normal;background:linear-gradient(135deg,var(--blue-l),var(--emerald-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ptitle p{font-size:.82rem;color:var(--neutral);margin-top:7px;font-weight:400}
+.flow-chip{display:inline-flex;align-items:center;gap:7px;margin-top:14px;background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:7px 20px;font-size:.72rem;color:var(--neutral);font-weight:500;box-shadow:var(--sh-sm)}
 .flow-chip b{color:var(--blue-l);font-weight:600}
 
-/* ===== PHONES ===== */
-.phones-row{display:flex;gap:28px;justify-content:center;align-items:flex-start;flex-wrap:wrap}
+/* PHONES ROW */
+.phones-row{display:flex;gap:40px;justify-content:center;align-items:flex-start;flex-wrap:wrap}
 .phone-col{display:flex;flex-direction:column;align-items:center;gap:12px}
-.phone-tag{font-size:.65rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:5px 14px;border-radius:100px;border:1px solid}
-.phone-tag.client{background:var(--blue-xs);color:var(--blue-d);border-color:rgba(26,86,219,.15)}
-.phone-tag.cleaner{background:var(--teal-xs);color:var(--teal-d);border-color:rgba(8,145,178,.15)}
-.phone-tag.admin{background:var(--bg-d);color:var(--slate-l);border-color:var(--border)}
+.phone-tag{font-size:.65rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:6px 16px;border-radius:100px;border:1px solid}
+.phone-tag.client{background:var(--blue-xs);color:var(--blue-d);border-color:rgba(26,86,219,.18)}
+.phone-tag.owner{background:var(--emerald-xs);color:var(--emerald-d);border-color:rgba(5,150,105,.18)}
 
-/* ===== PHONE FRAME ===== */
+/* PHONE FRAME */
 .phone-outer{
-  width:318px;background:#c8c8cc;border-radius:50px;padding:10px;
+  width:320px;background:#c8c8cc;border-radius:52px;padding:10px;
   box-shadow:
     0 0 0 1px rgba(0,0,0,.12),
     inset 0 0 0 1px rgba(255,255,255,.7),
     var(--sh-xl),
-    0 8px 16px rgba(15,23,42,.1);
+    0 8px 16px rgba(15,23,42,.12);
   position:relative
 }
-.phone-outer::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#c8c8cc;border-radius:0 0 16px 16px;z-index:30}
+.phone-outer::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:112px;height:27px;background:#c8c8cc;border-radius:0 0 16px 16px;z-index:30}
 .phone-outer::after{content:'';position:absolute;top:8px;left:50%;transform:translateX(-50%);width:8px;height:8px;background:rgba(0,0,0,.18);border-radius:50%;z-index:31}
 .btn-s{position:absolute;background:#b8b8bc;border-radius:3px}
 .btn-s.vu{right:-3px;top:120px;width:3px;height:30px}
 .btn-s.vd{right:-3px;top:158px;width:3px;height:30px}
 .btn-s.pw{left:-3px;top:148px;width:3px;height:55px}
-.phone-screen{width:100%;height:672px;background:var(--bg);border-radius:40px;overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+.phone-screen{width:100%;height:676px;background:var(--bg);border-radius:42px;overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
 
-/* ===== SCREEN SYSTEM ===== */
-.scr{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;pointer-events:none;transition:opacity .24s ease,transform .28s cubic-bezier(.4,0,.2,1);transform:translateX(100%);background:var(--bg)}
+/* SCREEN SYSTEM */
+.scr{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;pointer-events:none;transition:opacity .22s ease,transform .28s cubic-bezier(.4,0,.2,1);transform:translateX(100%);background:var(--bg)}
 .scr.active{opacity:1;pointer-events:all;transform:translateX(0)}
 .scr.out-l{opacity:0;transform:translateX(-22%)!important}
 .scrl{flex:1;overflow-y:auto;overflow-x:hidden;scrollbar-width:none}
 .scrl::-webkit-scrollbar{display:none}
 
-/* ===== HEADERS ===== */
+/* HEADERS */
 .app-hdr{background:var(--surface);border-bottom:1px solid var(--border);padding:38px 18px 14px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.cyan-hdr{background:var(--surface);border-bottom:1px solid var(--border);padding:38px 18px 14px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.dark-hdr{background:var(--slate);border-bottom:none;padding:38px 18px 14px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.hdr-wordmark{font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;font-weight:700;color:var(--slate);letter-spacing:-0.2px}
-.hdr-wordmark span{color:var(--blue-l)}
-.dark-hdr .hdr-wordmark{color:#fff}
-.dark-hdr .hdr-wordmark span{color:var(--teal-l)}
-.hdr-ico{width:34px;height:34px;background:var(--bg-d);border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--slate-l);font-family:inherit;transition:all .15s;position:relative}
-.dark-hdr .hdr-ico{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.1);color:rgba(255,255,255,.7)}
-.hdr-ico:active{transform:scale(.93)}
-
+.em-hdr{background:var(--surface);border-bottom:1px solid var(--border);padding:38px 18px 14px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.dark-hdr{background:linear-gradient(145deg,var(--emerald-d),var(--emerald-l));padding:38px 18px 14px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;border-bottom:none}
 .back-hdr{background:var(--surface);border-bottom:1px solid var(--border);padding:38px 16px 14px;display:flex;align-items:center;gap:10px;flex-shrink:0}
-.cyan-back-hdr{background:var(--surface);border-bottom:1px solid var(--border);padding:38px 16px 14px;display:flex;align-items:center;gap:10px;flex-shrink:0}
-.dark-back-hdr{background:var(--slate);border-bottom:none;padding:38px 16px 14px;display:flex;align-items:center;gap:10px;flex-shrink:0}
+.em-back-hdr{background:var(--surface);border-bottom:1px solid var(--border);padding:38px 16px 14px;display:flex;align-items:center;gap:10px;flex-shrink:0}
+.dark-back-hdr{background:linear-gradient(145deg,var(--emerald-d),var(--emerald));padding:38px 16px 14px;display:flex;align-items:center;gap:10px;flex-shrink:0;border-bottom:none}
+
+.hdr-wordmark{font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;font-weight:800;color:var(--slate);letter-spacing:-.3px}
+.hdr-wordmark span{color:var(--blue-l)}
+.hdr-wordmark.dark{color:#fff}
+.hdr-wordmark.dark span{color:rgba(255,255,255,.65)}
+.hdr-ico{width:34px;height:34px;background:var(--bg-d);border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--slate-l);font-family:inherit;transition:all .15s;position:relative}
+.hdr-ico.dark{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.2);color:#fff}
+.hdr-ico:active{transform:scale(.92)}
 .back-btn{width:30px;height:30px;background:var(--bg-d);border:1px solid var(--border);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--slate-l);font-size:17px;font-family:inherit;flex-shrink:0;transition:all .15s}
-.dark-back-hdr .back-btn{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.8)}
+.back-btn.dark{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.2);color:#fff}
 .back-btn:active{transform:scale(.92)}
-.back-hdr h2,.cyan-back-hdr h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;font-weight:700;color:var(--slate);flex:1;letter-spacing:-.2px}
+.back-hdr h2,.em-back-hdr h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;font-weight:700;color:var(--slate);flex:1;letter-spacing:-.2px}
 .dark-back-hdr h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;font-weight:700;color:#fff;flex:1;letter-spacing:-.2px}
 
-/* ===== BOTTOM NAV ===== */
+/* BOTTOM NAV */
 .bot-nav{background:var(--surface);border-top:1px solid var(--border);display:flex;padding:8px 0 14px;flex-shrink:0}
-.dark-bot-nav{background:var(--slate-m);border-top:1px solid rgba(255,255,255,.08);display:flex;padding:8px 0 14px;flex-shrink:0}
+.em-bot-nav{background:var(--surface);border-top:1px solid var(--border);display:flex;padding:8px 0 14px;flex-shrink:0}
 .nav-it{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:none;cursor:pointer;padding:2px 0;font-family:inherit}
 .nav-ic{font-size:17px;transition:transform .2s}
 .nav-lb{font-size:.52rem;font-weight:500;color:var(--neutral-l);letter-spacing:.2px;transition:color .2s}
 .nav-it.active .nav-lb{color:var(--blue-l)}
 .nav-it.active .nav-ic{transform:translateY(-1px)}
-.teal-nav .nav-it.active .nav-lb{color:var(--teal-d)}
-.dark-nav-lb{font-size:.52rem;font-weight:500;color:rgba(255,255,255,.4);letter-spacing:.2px}
-.dark-nav-it.active .dark-nav-lb{color:var(--teal-l)}
+.em-nav .nav-it.active .nav-lb{color:var(--emerald-d)}
 .nav-ic-wrap{position:relative;display:inline-block}
 .nbadge{position:absolute;top:-5px;right:-6px;background:#ef4444;color:#fff;font-size:.42rem;font-weight:700;border-radius:50%;width:14px;height:14px;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface)}
 
-/* ===== STATUS PILLS ===== */
+/* PILLS */
 .pill{font-size:.53rem;font-weight:600;padding:3px 9px;border-radius:100px;letter-spacing:.2px;white-space:nowrap;border:1px solid}
 .pill-new{background:var(--blue-xs);color:var(--blue-d);border-color:rgba(26,86,219,.12)}
 .pill-acc{background:var(--green-xs);color:var(--green);border-color:rgba(5,150,105,.12)}
 .pill-rej{background:var(--red-xs);color:var(--red);border-color:rgba(220,38,38,.12)}
-.pill-pend{background:var(--amber-l);color:var(--amber);border-color:rgba(217,119,6,.15)}
+.pill-pend{background:var(--amber-xs);color:var(--amber);border-color:rgba(217,119,6,.15)}
 
-/* ===== HERO — CLIENT ===== */
+/* CLIENT HERO */
 .hero{background:linear-gradient(145deg,var(--blue-d) 0%,var(--blue-l) 100%);margin:14px 14px 0;border-radius:var(--radius-lg);padding:22px 18px;position:relative;overflow:hidden;box-shadow:0 12px 32px rgba(26,86,219,.24),0 0 0 1px rgba(26,86,219,.1)}
-.hero::after{content:'';position:absolute;right:-28px;top:-28px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.07)}
+.hero::before{content:'';position:absolute;right:-30px;top:-30px;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.06)}
+.hero::after{content:'';position:absolute;right:20px;bottom:-20px;width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.04)}
 .hero-badge{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);color:rgba(255,255,255,.9);font-size:.57rem;font-weight:600;padding:3px 10px;border-radius:100px;display:inline-block;margin-bottom:10px;border:1px solid rgba(255,255,255,.15)}
 .hero h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.15rem;font-weight:800;color:#fff;line-height:1.3;position:relative;z-index:1;margin-bottom:6px;letter-spacing:-.3px}
 .hero p{font-size:.65rem;color:rgba(255,255,255,.68);position:relative;z-index:1;margin-bottom:14px;line-height:1.6}
-.hero-btn{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);color:#fff;border:1px solid rgba(255,255,255,.25);padding:9px 18px;border-radius:var(--radius-sm);font-family:'DM Sans',sans-serif;font-size:.73rem;font-weight:600;cursor:pointer;position:relative;z-index:1;transition:all .18s}
+.hero-btn{background:rgba(255,255,255,.18);backdrop-filter:blur(8px);color:#fff;border:1px solid rgba(255,255,255,.28);padding:9px 18px;border-radius:var(--radius-sm);font-family:'DM Sans',sans-serif;font-size:.73rem;font-weight:600;cursor:pointer;position:relative;z-index:1;transition:all .18s}
 .hero-btn:active{transform:scale(.96)}
 
 .stats-row{display:flex;margin:10px 14px 0;background:var(--surface);border-radius:var(--radius-md);padding:12px 0;border:1px solid var(--border);box-shadow:var(--sh-sm)}
@@ -136,7 +137,7 @@ body{
 .sec-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:700;color:var(--slate);padding:0 14px;margin:14px 0 8px;display:flex;align-items:center;gap:8px;letter-spacing:-.1px}
 .sec-title::after{content:'';flex:1;height:1px;background:var(--border)}
 
-/* ===== SERVICE GRID ===== */
+/* SERVICE GRID */
 .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 14px 14px}
 .svc-card{background:var(--surface);border-radius:var(--radius-md);padding:14px 12px;cursor:pointer;border:1px solid var(--border);transition:all .18s;box-shadow:var(--sh-sm)}
 .svc-card:active{transform:scale(.95);box-shadow:none}
@@ -144,7 +145,7 @@ body{
 .svc-nm{font-size:.67rem;font-weight:600;color:var(--slate);margin-top:6px;line-height:1.35}
 .svc-tg{font-size:.5rem;font-weight:600;background:var(--blue-xs);color:var(--blue-d);padding:2px 7px;border-radius:100px;text-transform:uppercase;letter-spacing:.3px;width:fit-content;margin-top:5px;border:1px solid rgba(26,86,219,.1)}
 
-/* ===== BOOKING FORM ===== */
+/* BOOKING FORM */
 .bk-svc-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:10px 14px 14px;flex-shrink:0}
 .bk-svc-inner{background:var(--blue-xs);border:1px solid rgba(26,86,219,.12);border-radius:var(--radius);padding:10px 13px;display:flex;align-items:center;gap:10px}
 .bk-svc-inner .bem{font-size:18px}
@@ -167,14 +168,14 @@ body{
 .fld{margin-bottom:9px}
 .fld label{display:block;font-size:.6rem;font-weight:600;color:var(--neutral);margin-bottom:4px;letter-spacing:.1px}
 .fld input,.fld textarea,.fld select{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:9px 11px;font-family:'DM Sans',sans-serif;font-size:.73rem;color:var(--slate);outline:none;transition:border-color .15s,box-shadow .15s;-webkit-appearance:none}
-.fld input:focus,.fld textarea:focus,.fld select:focus{border-color:var(--blue-l);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+.fld input:focus,.fld textarea:focus{border-color:var(--blue-l);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
 .fld textarea{resize:none;height:60px}
 .fld-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 
 .conf-btn{background:var(--blue-l);color:#fff;border:none;border-radius:var(--radius);padding:13px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;font-weight:700;width:calc(100% - 28px);margin:14px;cursor:pointer;box-shadow:0 4px 14px rgba(37,99,235,.28);transition:all .18s;display:flex;align-items:center;justify-content:center;gap:7px;letter-spacing:-.1px}
 .conf-btn:active{transform:scale(.97)}
 
-/* ===== CONFIRMED ===== */
+/* CONFIRMED */
 .check-wrap{width:68px;height:68px;background:linear-gradient(135deg,var(--blue-d),var(--blue-l));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:20px auto 12px;box-shadow:0 8px 24px rgba(26,86,219,.25)}
 .check-ico{font-size:26px;color:#fff}
 .conf-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.05rem;font-weight:800;color:var(--slate);text-align:center;margin-bottom:4px;letter-spacing:-.3px}
@@ -185,7 +186,7 @@ body{
 .sum-k{font-size:.61rem;color:var(--neutral);font-weight:400}
 .sum-v{font-size:.64rem;color:var(--slate);font-weight:600;text-align:right;max-width:58%}
 
-/* ===== BOOKING CARDS ===== */
+/* BOOKING CARDS */
 .bk-card{background:var(--surface);border-radius:var(--radius-md);margin:8px 14px 0;border:1px solid var(--border);overflow:hidden;box-shadow:var(--sh-sm);cursor:pointer;transition:box-shadow .18s}
 .bk-card:active{box-shadow:none}
 .bk-card-head{padding:12px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border-l)}
@@ -207,7 +208,7 @@ body{
 .bk-empty p{font-size:.66rem;color:var(--neutral);line-height:1.6}
 .bk-empty-btn{background:var(--blue-l);color:#fff;border:none;border-radius:var(--radius-sm);padding:9px 20px;font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:600;cursor:pointer;margin-top:8px}
 
-/* ===== DETAIL ===== */
+/* CLIENT DETAIL */
 .det-hdr-block{background:var(--surface);border-bottom:1px solid var(--border);padding:10px 14px 14px;flex-shrink:0}
 .det-svc-card{background:var(--blue-xs);border:1px solid rgba(26,86,219,.12);border-radius:var(--radius);padding:11px 13px;display:flex;align-items:center;gap:10px}
 .det-svc-card .em{font-size:22px}
@@ -223,14 +224,14 @@ body{
 .det-v{font-size:.62rem;font-weight:600;color:var(--slate);text-align:right;max-width:60%}
 
 .status-banner{border-radius:var(--radius);padding:10px 13px;margin:12px 14px 0;display:flex;align-items:center;gap:9px;border:1px solid}
-.status-banner.pending{background:var(--amber-l);border-color:rgba(217,119,6,.2)}
+.status-banner.pending{background:var(--amber-xs);border-color:rgba(217,119,6,.2)}
 .status-banner.accepted{background:var(--green-xs);border-color:rgba(5,150,105,.15)}
 .status-banner.rejected{background:var(--red-xs);border-color:rgba(220,38,38,.12)}
 .status-banner-ic{font-size:17px;flex-shrink:0}
 .status-banner-txt h5{font-size:.67rem;font-weight:600;color:var(--slate)}
 .status-banner-txt p{font-size:.57rem;color:var(--neutral);margin-top:1px}
 
-/* ===== NOTIFICATIONS ===== */
+/* NOTIFICATIONS */
 .notif-item{background:var(--surface);border-radius:var(--radius);margin:7px 14px 0;padding:11px 13px;border:1px solid var(--border);cursor:pointer;display:flex;align-items:flex-start;gap:9px;box-shadow:var(--sh-sm);transition:all .15s}
 .notif-item.unread{border-left:3px solid var(--blue-l)}
 .notif-item .nic{font-size:18px;flex-shrink:0;margin-top:1px}
@@ -239,135 +240,98 @@ body{
 .notif-item .ntime{font-size:.53rem;color:var(--neutral-l);margin-top:3px}
 .notif-dot{width:7px;height:7px;border-radius:50%;background:var(--blue-l);flex-shrink:0;margin-top:5px}
 
-/* ===== PROFILE ===== */
+/* PROFILE */
 .pmenu-item{display:flex;align-items:center;gap:10px;padding:11px 13px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:6px;cursor:pointer;transition:all .15s;box-shadow:var(--sh-sm)}
 .pmenu-item:active{background:var(--bg-d)}
 .pmenu-ic{width:32px;height:32px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
 .pmenu-tx{font-size:.72rem;font-weight:500;color:var(--slate);flex:1}
 .pmenu-ar{font-size:12px;color:var(--neutral-ll)}
 
-/* ===== CLEANER HERO ===== */
-.cl-hero{background:linear-gradient(145deg,var(--teal-d),var(--teal-l));margin:12px 14px 0;border-radius:var(--radius-md);padding:18px 16px;position:relative;overflow:hidden;box-shadow:0 10px 28px rgba(8,145,178,.22),0 0 0 1px rgba(8,145,178,.1)}
-.cl-hero::after{content:'';position:absolute;right:-22px;top:-22px;width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,.06)}
-.cl-hero-tag{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);font-size:.56rem;font-weight:600;padding:3px 9px;border-radius:100px;display:inline-block;margin-bottom:7px}
-.cl-hero h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;font-weight:700;color:#fff;margin-bottom:2px;letter-spacing:-.2px}
-.cl-hero p{font-size:.61rem;color:rgba(255,255,255,.65)}
-.online-dot{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:100px;padding:3px 10px;margin-top:9px}
-.online-dot span.dot{width:6px;height:6px;border-radius:50%;background:#4ade80;display:inline-block;box-shadow:0 0 0 2px rgba(74,222,128,.25)}
-.online-dot span.lbl{font-size:.56rem;color:#fff;font-weight:500}
-
-.cl-stats{display:flex;gap:7px;padding:10px 14px 0}
-.cl-stat{flex:1;background:var(--surface);border-radius:var(--radius);padding:10px 7px;border:1px solid var(--border);text-align:center;box-shadow:var(--sh-sm)}
-.cl-stat .n{font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;font-weight:700;color:var(--teal-d)}
-.cl-stat .l{font-size:.49rem;color:var(--neutral);font-weight:500;text-transform:uppercase;letter-spacing:.3px;margin-top:2px}
-
-/* ===== JOB CARDS ===== */
-.job-card{background:var(--surface);border-radius:var(--radius-md);margin:7px 14px 0;padding:13px;border:1px solid var(--border);box-shadow:var(--sh-sm)}
-.job-card.new-job{border-color:rgba(8,145,178,.2);background:var(--teal-xs)}
-.job-card.clickable{cursor:pointer;transition:all .18s}
-.job-card.clickable:active{transform:scale(.98);box-shadow:none}
-.job-top{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px}
-.job-ic{width:36px;height:36px;border-radius:var(--radius-sm);background:var(--teal-xs);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;border:1px solid rgba(8,145,178,.12)}
-.job-info{flex:1}
-.job-info h4{font-size:.74rem;font-weight:600;color:var(--slate)}
-.job-info p{font-size:.58rem;color:var(--neutral);margin-top:2px}
-.job-meta{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
-.job-meta-item .lbl{font-size:.53rem;color:var(--neutral-l);margin-bottom:1px;font-weight:400}
-.job-meta-item .val{font-size:.61rem;font-weight:600;color:var(--slate)}
-.job-actions{display:flex;gap:8px}
-.acc-btn{flex:1;background:var(--green);color:#fff;border:none;border-radius:var(--radius-sm);padding:9px;font-family:'DM Sans',sans-serif;font-size:.67rem;font-weight:600;cursor:pointer;transition:all .15s;box-shadow:0 3px 10px rgba(5,150,105,.2)}
-.acc-btn:active{transform:scale(.96)}
-.rej-btn{flex:1;background:var(--surface);color:var(--red);border:1px solid rgba(220,38,38,.2);border-radius:var(--radius-sm);padding:9px;font-family:'DM Sans',sans-serif;font-size:.67rem;font-weight:600;cursor:pointer;transition:all .15s}
-.tap-hint{font-size:.57rem;color:var(--neutral-l);text-align:center;margin-top:8px;font-style:italic}
-
-/* ===== CLEANER NOTIFS ===== */
-.cl-notif-item{background:var(--surface);border-radius:var(--radius);margin:7px 14px 0;padding:11px 13px;border:1px solid var(--border);cursor:pointer;display:flex;align-items:flex-start;gap:9px;box-shadow:var(--sh-sm);transition:all .15s}
-.cl-notif-item.unread{border-left:3px solid var(--teal-d)}
-.cl-notif-item .nic{font-size:18px;flex-shrink:0}
-.cl-notif-item .ntxt h5{font-size:.69rem;font-weight:600;color:var(--slate)}
-.cl-notif-item .ntxt p{font-size:.58rem;color:var(--neutral);margin-top:2px;line-height:1.5}
-.cl-notif-item .ntime{font-size:.53rem;color:var(--neutral-l);margin-top:3px}
-
-/* ===== SCHEDULE ===== */
-.sched-card{background:var(--surface);border-radius:var(--radius);margin:7px 14px 0;padding:12px;border:1px solid var(--border);display:flex;align-items:center;gap:11px;box-shadow:var(--sh-sm)}
-.sched-date{width:38px;height:44px;background:var(--teal-xs);border:1px solid rgba(8,145,178,.1);border-radius:var(--radius-sm);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0}
-.sched-day{font-size:.5rem;font-weight:700;color:var(--teal-d);text-transform:uppercase;letter-spacing:.5px}
-.sched-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;font-weight:700;color:var(--teal-d)}
-.sched-info{flex:1}
-.sched-info h4{font-size:.7rem;font-weight:600;color:var(--slate)}
-.sched-info p{font-size:.57rem;color:var(--neutral);margin-top:2px}
-
-/* ===== ADMIN ===== */
-.adm-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px 14px 0}
-.adm-stat-card{background:var(--surface);border-radius:var(--radius-md);padding:14px 12px;border:1px solid var(--border);box-shadow:var(--sh-sm);position:relative;overflow:hidden}
-.adm-stat-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;border-radius:2px 2px 0 0}
-.adm-stat-card.blue::after{background:var(--blue-l)}
-.adm-stat-card.cyan::after{background:var(--teal-l)}
-.adm-stat-card.green::after{background:var(--green)}
-.adm-stat-card.red::after{background:#f97316}
-.adm-stat-ic{font-size:20px;margin-bottom:8px}
-.adm-stat-n{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;font-weight:700;color:var(--slate)}
-.adm-stat-l{font-size:.53rem;color:var(--neutral);font-weight:500;text-transform:uppercase;letter-spacing:.3px;margin-top:2px}
-
-.adm-booking-row{background:var(--surface);border-radius:var(--radius);margin:7px 14px 0;padding:11px 13px;border:1px solid var(--border);display:flex;align-items:center;gap:9px;cursor:pointer;box-shadow:var(--sh-sm);transition:all .15s}
-.adm-booking-row:active{background:var(--bg-d)}
-.adm-bk-ic{width:34px;height:34px;border-radius:var(--radius-sm);background:var(--blue-xs);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;border:1px solid rgba(26,86,219,.08)}
-.adm-bk-info{flex:1}
-.adm-bk-info h4{font-size:.71rem;font-weight:600;color:var(--slate)}
-.adm-bk-info p{font-size:.57rem;color:var(--neutral);margin-top:1px}
-
-.adm-cleaner-row{background:var(--surface);border-radius:var(--radius);margin:7px 14px 0;padding:11px 13px;border:1px solid var(--border);display:flex;align-items:center;gap:9px;box-shadow:var(--sh-sm)}
-.adm-av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--blue-d),var(--blue-l));display:flex;align-items:center;justify-content:center;font-size:.62rem;font-weight:700;color:#fff;flex-shrink:0}
-.adm-cl-info{flex:1}
-.adm-cl-info h4{font-size:.71rem;font-weight:600;color:var(--slate)}
-.adm-cl-info p{font-size:.56rem;color:var(--neutral);margin-top:1px}
-.online-badge{font-size:.5rem;font-weight:600;padding:3px 8px;border-radius:100px;border:1px solid}
-.online-badge.on{background:var(--green-xs);color:var(--green);border-color:rgba(5,150,105,.15)}
-.online-badge.off{background:var(--bg-d);color:var(--neutral);border-color:var(--border)}
-
-/* ===== LOGIN ===== */
-.login-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 20px;background:var(--bg)}
-.login-logo{width:60px;height:60px;background:linear-gradient(135deg,var(--teal-d),var(--teal-l));border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px;box-shadow:0 8px 24px rgba(8,145,178,.25)}
-.login-wrap h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:800;color:var(--slate);margin-bottom:4px;letter-spacing:-.3px}
-.login-wrap>p{font-size:.67rem;color:var(--neutral);margin-bottom:22px;text-align:center;line-height:1.5}
-.cl-fld{margin-bottom:9px;width:100%}
-.cl-fld label{display:block;font-size:.6rem;font-weight:600;color:var(--neutral);margin-bottom:4px;text-transform:uppercase;letter-spacing:.3px}
-.cl-fld input{width:100%;border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;font-family:'DM Sans',sans-serif;font-size:.73rem;color:var(--slate);background:var(--surface);outline:none;-webkit-appearance:none;transition:border-color .15s,box-shadow .15s}
-.cl-fld input:focus{border-color:var(--teal-l);box-shadow:0 0 0 3px rgba(6,182,212,.1)}
-.cl-login-btn{background:var(--teal-l);color:#fff;border:none;border-radius:var(--radius);padding:12px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;font-weight:700;width:100%;cursor:pointer;margin-top:4px;box-shadow:0 4px 14px rgba(6,182,212,.25);transition:all .18s}
-.cl-login-btn:active{transform:scale(.97)}
-.login-hint{font-size:.56rem;color:var(--neutral-l);margin-top:12px;text-align:center}
-.login-hint span{color:var(--teal-d);font-weight:600}
-
-.adm-login-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 20px;background:var(--slate)}
-.adm-login-logo{width:60px;height:60px;background:linear-gradient(135deg,var(--blue-d),var(--blue-l));border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;box-shadow:0 8px 24px rgba(26,86,219,.3)}
-.adm-login-wrap h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:-.3px}
-.adm-login-wrap>p{font-size:.67rem;color:rgba(255,255,255,.45);margin-bottom:22px;text-align:center}
-.adm-fld{margin-bottom:9px;width:100%}
-.adm-fld label{display:block;font-size:.6rem;font-weight:600;color:rgba(255,255,255,.45);margin-bottom:4px;text-transform:uppercase;letter-spacing:.3px}
-.adm-fld input{width:100%;border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-sm);padding:10px 12px;font-family:'DM Sans',sans-serif;font-size:.73rem;color:#fff;background:rgba(255,255,255,.07);outline:none;-webkit-appearance:none;transition:border-color .15s}
-.adm-fld input:focus{border-color:var(--blue-l)}
-.adm-login-btn{background:var(--blue-l);color:#fff;border:none;border-radius:var(--radius);padding:12px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;font-weight:700;width:100%;cursor:pointer;margin-top:4px;box-shadow:0 4px 14px rgba(37,99,235,.3);transition:all .18s}
-.adm-login-btn:active{transform:scale(.97)}
-
-/* ===== TOAST ===== */
+/* TOAST */
 .toast{position:absolute;top:44px;left:12px;right:12px;background:var(--surface);border-radius:var(--radius-md);padding:11px 13px;box-shadow:var(--sh-lg),0 0 0 1px var(--border);z-index:400;display:flex;align-items:center;gap:9px;transform:translateY(-110px);opacity:0;transition:all .35s cubic-bezier(.34,1.56,.64,1)}
 .toast.show{transform:translateY(0);opacity:1}
 .toast-client{border-left:3px solid var(--blue-l)}
-.toast-cleaner{border-left:3px solid var(--teal-l)}
-.toast-admin{border-left:3px solid var(--slate-l)}
+.toast-owner{border-left:3px solid var(--emerald-l)}
 .toast-ic{font-size:18px;flex-shrink:0}
 .toast-body h5{font-size:.68rem;font-weight:600;color:var(--slate)}
 .toast-body p{font-size:.57rem;color:var(--neutral);margin-top:1px}
 .toast-x{margin-left:auto;background:none;border:none;font-size:13px;cursor:pointer;color:var(--neutral-l);font-family:inherit;line-height:1;flex-shrink:0}
 
-/* ===== ADMIN DETAIL ===== */
-.adm-action-row{display:flex;gap:8px;padding:14px}
-.adm-acc{flex:1;background:var(--green);color:#fff;border:none;border-radius:var(--radius-sm);padding:10px;font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:600;cursor:pointer;box-shadow:0 3px 10px rgba(5,150,105,.2)}
-.adm-rej{flex:1;background:var(--surface);color:var(--red);border:1px solid rgba(220,38,38,.2);border-radius:var(--radius-sm);padding:10px;font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:600;cursor:pointer}
+/* ===== OWNER APP ===== */
+/* Owner Hero */
+.ow-hero{background:linear-gradient(145deg,var(--emerald-d),var(--emerald-l));margin:0;padding:38px 18px 20px;position:relative;overflow:hidden;flex-shrink:0}
+.ow-hero::before{content:'';position:absolute;right:-30px;top:-30px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.07)}
+.ow-hero::after{content:'';position:absolute;left:-20px;bottom:-30px;width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,.05)}
+.ow-greeting{font-size:.62rem;font-weight:600;color:rgba(255,255,255,.7);margin-bottom:4px;letter-spacing:.2px;text-transform:uppercase;position:relative;z-index:1}
+.ow-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;font-weight:800;color:#fff;letter-spacing:-.3px;position:relative;z-index:1;margin-bottom:2px}
+.ow-sub{font-size:.6rem;color:rgba(255,255,255,.6);position:relative;z-index:1;margin-bottom:12px}
+.ow-status-row{display:flex;align-items:center;gap:8px;position:relative;z-index:1}
+.ow-status-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 2px rgba(74,222,128,.3)}
+.ow-status-txt{font-size:.62rem;font-weight:600;color:rgba(255,255,255,.9)}
+.ow-earnings-row{display:flex;gap:8px;margin:0 14px;margin-top:-10px;position:relative;z-index:2}
+.ow-earn-card{flex:1;background:var(--surface);border-radius:var(--radius-md);padding:12px 10px;border:1px solid var(--border);box-shadow:var(--sh-md);text-align:center}
+.ow-earn-n{font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;font-weight:800;color:var(--emerald-d)}
+.ow-earn-l{font-size:.49rem;color:var(--neutral);font-weight:500;text-transform:uppercase;letter-spacing:.3px;margin-top:2px}
 
-/* ===== ADMIN WELCOME BANNER ===== */
-.adm-welcome{background:linear-gradient(145deg,var(--slate),var(--slate-m));border-radius:var(--radius-md);padding:14px;margin:12px 14px 0;display:flex;align-items:center;justify-content:space-between;box-shadow:var(--sh)}
+/* Owner Job Cards */
+.ow-job{background:var(--surface);border-radius:var(--radius-md);margin:7px 14px 0;padding:13px;border:1px solid var(--border);box-shadow:var(--sh-sm)}
+.ow-job.new{border-color:rgba(5,150,105,.25);background:linear-gradient(145deg,var(--emerald-xs),#fff)}
+.ow-job.clickable{cursor:pointer;transition:all .18s}
+.ow-job.clickable:active{transform:scale(.98);box-shadow:none}
+.ow-job-top{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px}
+.ow-job-ic{width:38px;height:38px;border-radius:var(--radius-sm);background:var(--emerald-xs);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;border:1px solid rgba(5,150,105,.14)}
+.ow-job-info h4{font-size:.75rem;font-weight:700;color:var(--slate)}
+.ow-job-info p{font-size:.58rem;color:var(--neutral);margin-top:2px}
+.ow-job-meta{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
+.ow-meta-item .lbl{font-size:.53rem;color:var(--neutral-l);margin-bottom:1px}
+.ow-meta-item .val{font-size:.63rem;font-weight:600;color:var(--slate)}
+.ow-actions{display:flex;gap:8px}
+.ow-acc{flex:1;background:var(--emerald-d);color:#fff;border:none;border-radius:var(--radius-sm);padding:10px;font-family:'DM Sans',sans-serif;font-size:.69rem;font-weight:700;cursor:pointer;transition:all .15s;box-shadow:0 3px 10px rgba(5,150,105,.25)}
+.ow-acc:active{transform:scale(.96)}
+.ow-rej{flex:1;background:var(--surface);color:var(--red);border:1px solid rgba(220,38,38,.2);border-radius:var(--radius-sm);padding:10px;font-family:'DM Sans',sans-serif;font-size:.69rem;font-weight:600;cursor:pointer;transition:all .15s}
+
+/* Owner Schedule */
+.sched-card{background:var(--surface);border-radius:var(--radius);margin:7px 14px 0;padding:12px;border:1px solid var(--border);display:flex;align-items:center;gap:11px;box-shadow:var(--sh-sm)}
+.sched-date{width:40px;height:46px;background:var(--emerald-xs);border:1px solid rgba(5,150,105,.12);border-radius:var(--radius-sm);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0}
+.sched-day{font-size:.5rem;font-weight:700;color:var(--emerald-d);text-transform:uppercase;letter-spacing:.5px}
+.sched-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;font-weight:700;color:var(--emerald-d)}
+.sched-info{flex:1}
+.sched-info h4{font-size:.7rem;font-weight:600;color:var(--slate)}
+.sched-info p{font-size:.57rem;color:var(--neutral);margin-top:2px}
+
+/* Owner Notifs */
+.ow-notif{background:var(--surface);border-radius:var(--radius);margin:7px 14px 0;padding:11px 13px;border:1px solid var(--border);cursor:pointer;display:flex;align-items:flex-start;gap:9px;box-shadow:var(--sh-sm)}
+.ow-notif.unread{border-left:3px solid var(--emerald-l)}
+.ow-notif .nic{font-size:18px;flex-shrink:0}
+.ow-notif .ntxt h5{font-size:.69rem;font-weight:600;color:var(--slate)}
+.ow-notif .ntxt p{font-size:.58rem;color:var(--neutral);margin-top:2px;line-height:1.5}
+.ow-notif .ntime{font-size:.53rem;color:var(--neutral-l);margin-top:3px}
+.ow-notif-dot{width:7px;height:7px;border-radius:50%;background:var(--emerald-l);flex-shrink:0;margin-top:5px}
+
+/* Owner Job Detail */
+.ow-krow{display:flex;justify-content:space-between;padding:8px 13px;border-bottom:1px solid var(--border-l)}
+.ow-krow:last-child{border-bottom:none}
+.ow-krow .k{font-size:.6rem;color:var(--neutral)}
+.ow-krow .v{font-size:.62rem;font-weight:600;color:var(--slate);text-align:right;max-width:60%}
+
+/* Income Tab */
+.income-bar{background:linear-gradient(145deg,var(--emerald-d),var(--emerald-l));margin:0;padding:38px 18px 20px;flex-shrink:0;position:relative;overflow:hidden}
+.income-bar::before{content:'';position:absolute;right:-20px;top:-20px;width:130px;height:130px;border-radius:50%;background:rgba(255,255,255,.06)}
+.income-bar h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:700;color:rgba(255,255,255,.7);margin-bottom:4px;position:relative;z-index:1}
+.income-total{font-family:'Plus Jakarta Sans',sans-serif;font-size:2rem;font-weight:900;color:#fff;letter-spacing:-1px;position:relative;z-index:1}
+.income-sub{font-size:.6rem;color:rgba(255,255,255,.55);position:relative;z-index:1;margin-top:2px}
+.income-item{background:var(--surface);border-radius:var(--radius);margin:7px 14px 0;padding:12px 13px;border:1px solid var(--border);display:flex;align-items:center;gap:10px;box-shadow:var(--sh-sm)}
+.income-ic{width:34px;height:34px;border-radius:var(--radius-sm);background:var(--emerald-xs);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;border:1px solid rgba(5,150,105,.1)}
+.income-info{flex:1}
+.income-info h4{font-size:.7rem;font-weight:600;color:var(--slate)}
+.income-info p{font-size:.56rem;color:var(--neutral);margin-top:1px}
+.income-amt{font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;font-weight:700;color:var(--emerald-d)}
+
+/* Empty */
+.empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 20px;text-align:center}
+.empty-state .ei{font-size:38px;opacity:.3;margin-bottom:10px}
+.empty-state h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;font-weight:700;color:var(--slate)}
+.empty-state p{font-size:.65rem;color:var(--neutral);margin-top:4px;line-height:1.55}
 </style>
 </head>
 <body>
@@ -376,16 +340,16 @@ body{
   <div class="logo-row">
     <div class="logo-mark">🧹</div>
     <div>
-      <h1><em>Al Rukam Clean</em> System Demo</h1>
+      <h1><em>CleanPro Solo</em> — Booking Demo</h1>
     </div>
   </div>
-  <p>Client Booking App · Cleaner Portal · Admin Dashboard — Dubai, UAE</p>
-  <div class="flow-chip">📱 Client Books → 🔔 Notified → ✅ Accept → <b>Live sync across all apps</b></div>
+  <p>For independent cleaners running their own business — simple, powerful, personal</p>
+  <div class="flow-chip">📱 Client Books → 🔔 You Get Notified → ✅ Accept → <b>Real-time updates on both phones</b></div>
 </div>
 
 <div class="phones-row">
 
-<!-- ================== CLIENT ================== -->
+<!-- ========== CLIENT ========== -->
 <div class="phone-col">
   <div class="phone-tag client">📱 Client App</div>
   <div class="phone-outer">
@@ -401,25 +365,23 @@ body{
       <!-- HOME -->
       <div class="scr active" id="c-home">
         <div class="app-hdr">
-          <div class="hdr-wordmark">Al Rukam <span>Clean</span></div>
-          <div style="display:flex;gap:7px">
-            <div style="position:relative">
-              <button class="hdr-ico" onclick="cGoTo('c-notifs')">🔔</button>
-              <span class="nbadge" id="c-bell-badge" style="display:none">0</span>
-            </div>
+          <div class="hdr-wordmark">CleanPro <span>App</span></div>
+          <div style="position:relative">
+            <button class="hdr-ico" onclick="cGoTo('c-notifs')">🔔</button>
+            <span class="nbadge" id="c-bell-badge" style="display:none">0</span>
           </div>
         </div>
         <div class="scrl">
           <div class="hero">
-            <div class="hero-badge">⭐ 5.0 · 189 Reviews · Dubai Trusted</div>
-            <h2>Expert Deep Cleaning<br>Services in Dubai</h2>
-            <p>Professional cleaning for villas, apartments, offices & more across the UAE</p>
+            <div class="hero-badge">⭐ 5.0 · 189 Reviews · Your Local Pro</div>
+            <h2>Professional Cleaning,<br>Done Right</h2>
+            <p>Reliable, trusted, and affordable cleaning for homes & offices in your city</p>
             <button class="hero-btn" onclick="cGoTo('c-services')">Book a Clean →</button>
           </div>
           <div class="stats-row">
             <div class="stat"><div class="stat-n">5.0★</div><div class="stat-l">Rating</div></div>
             <div class="stat"><div class="stat-n">189</div><div class="stat-l">Reviews</div></div>
-            <div class="stat"><div class="stat-n">UAE</div><div class="stat-l">All States</div></div>
+            <div class="stat"><div class="stat-n">5yr</div><div class="stat-l">Experience</div></div>
           </div>
           <div class="sec-title">Our Services</div>
           <div class="svc-grid">
@@ -446,15 +408,15 @@ body{
           <div class="svc-grid">
             <div class="svc-card" onclick="cOpenBook('Villa Deep Cleaning','🏡')"><div class="svc-em">🏡</div><div class="svc-nm">Villa Deep Cleaning</div><div class="svc-tg">Popular</div></div>
             <div class="svc-card" onclick="cOpenBook('Apartment Cleaning','🏠')"><div class="svc-em">🏠</div><div class="svc-nm">Apartment Cleaning</div><div class="svc-tg">Top Pick</div></div>
-            <div class="svc-card" onclick="cOpenBook('Office Deep Cleaning','🏢')"><div class="svc-em">🏢</div><div class="svc-nm">Office Cleaning</div><div class="svc-tg">Business</div></div>
+            <div class="svc-card" onclick="cOpenBook('Office Cleaning','🏢')"><div class="svc-em">🏢</div><div class="svc-nm">Office Cleaning</div><div class="svc-tg">Business</div></div>
             <div class="svc-card" onclick="cOpenBook('Move In/Out Cleaning','📦')"><div class="svc-em">📦</div><div class="svc-nm">Move In/Out Clean</div><div class="svc-tg">Handover</div></div>
             <div class="svc-card" onclick="cOpenBook('AC Duct Cleaning','❄️')"><div class="svc-em">❄️</div><div class="svc-nm">AC Duct Cleaning</div><div class="svc-tg">Technical</div></div>
             <div class="svc-card" onclick="cOpenBook('Carpet Cleaning','🧶')"><div class="svc-em">🧶</div><div class="svc-nm">Carpet Cleaning</div><div class="svc-tg">Refresh</div></div>
             <div class="svc-card" onclick="cOpenBook('Sofa Cleaning','🛋️')"><div class="svc-em">🛋️</div><div class="svc-nm">Sofa Cleaning</div><div class="svc-tg">Upholstery</div></div>
-            <div class="svc-card" onclick="cOpenBook('Facade Cleaning','🏗️')"><div class="svc-em">🏗️</div><div class="svc-nm">Facade Cleaning</div><div class="svc-tg">High-Rise</div></div>
             <div class="svc-card" onclick="cOpenBook('Post-Construction','🔨')"><div class="svc-em">🔨</div><div class="svc-nm">Post-Construction</div><div class="svc-tg">Renovation</div></div>
-            <div class="svc-card" onclick="cOpenBook('Painting Services','🎨')"><div class="svc-em">🎨</div><div class="svc-nm">Painting Services</div><div class="svc-tg">Interiors</div></div>
             <div class="svc-card" onclick="cOpenBook('Window Cleaning','🪟')"><div class="svc-em">🪟</div><div class="svc-nm">Window Cleaning</div><div class="svc-tg">Glass</div></div>
+            <div class="svc-card" onclick="cOpenBook('Kitchen Deep Clean','🍳')"><div class="svc-em">🍳</div><div class="svc-nm">Kitchen Deep Clean</div><div class="svc-tg">Spotless</div></div>
+            <div class="svc-card" onclick="cOpenBook('Bathroom Cleaning','🚿')"><div class="svc-em">🚿</div><div class="svc-nm">Bathroom Cleaning</div><div class="svc-tg">Hygienic</div></div>
             <div class="svc-card" onclick="cOpenBook('Handyman Services','🔧')"><div class="svc-em">🔧</div><div class="svc-nm">Handyman Services</div><div class="svc-tg">Maintenance</div></div>
           </div>
         </div>
@@ -490,9 +452,9 @@ body{
           <div class="form-sec">
             <div class="form-sec-title">Your Details</div>
             <div class="fld"><label>Full Name *</label><input type="text" id="cf-name" placeholder="e.g. Ahmed Al Mansouri"></div>
-            <div class="fld"><label>Phone Number *</label><input type="tel" id="cf-phone" placeholder="+971 52 456 7891"></div>
+            <div class="fld"><label>Phone Number *</label><input type="tel" id="cf-phone" placeholder="+1 234 567 8901"></div>
             <div class="fld"><label>Email Address</label><input type="email" id="cf-email" placeholder="ahmed@email.com"></div>
-            <div class="fld"><label>Property Address *</label><input type="text" id="cf-addr" placeholder="Dubai — Area, Villa/Apt number"></div>
+            <div class="fld"><label>Property Address *</label><input type="text" id="cf-addr" placeholder="Street, City, Postcode"></div>
           </div>
           <div class="form-sec">
             <div class="form-sec-title">Date & Time</div>
@@ -512,15 +474,15 @@ body{
         <div class="scrl">
           <div class="check-wrap"><div class="check-ico">✓</div></div>
           <div class="conf-title">Booking Sent!</div>
-          <div class="conf-sub">Your request has been received. Our team will confirm shortly — you'll be notified instantly.</div>
+          <div class="conf-sub">Your request has been received. Your cleaner will confirm shortly — you'll be notified instantly.</div>
           <div class="sum-card" id="c-sum-card"></div>
-          <div style="background:var(--teal-xs);border:1px solid rgba(8,145,178,.15);border-radius:var(--radius);padding:11px 13px;margin:0 14px 10px;display:flex;align-items:center;gap:9px">
+          <div style="background:var(--emerald-xs);border:1px solid rgba(5,150,105,.15);border-radius:var(--radius);padding:11px 13px;margin:0 14px 10px;display:flex;align-items:center;gap:9px">
             <span style="font-size:17px">🔔</span>
-            <div style="font-size:.61rem;color:var(--teal-d);font-weight:500;line-height:1.5">You'll receive a notification when your cleaner accepts the job.</div>
+            <div style="font-size:.61rem;color:var(--emerald-d);font-weight:500;line-height:1.5">You'll receive a notification when your cleaner accepts the job.</div>
           </div>
           <div style="background:var(--blue-l);border-radius:var(--radius);padding:13px;margin:0 14px 10px;text-align:center">
-            <p style="font-size:.6rem;color:rgba(255,255,255,.65);margin-bottom:2px">Call us anytime</p>
-            <a href="tel:+971526099678" style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.92rem;font-weight:700;color:#fff;text-decoration:none;display:block">+971 52 609 9678</a>
+            <p style="font-size:.6rem;color:rgba(255,255,255,.65);margin-bottom:2px">Call anytime</p>
+            <a href="tel:+12345678901" style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.92rem;font-weight:700;color:#fff;text-decoration:none;display:block">+1 234 567 8901</a>
           </div>
           <button style="background:var(--surface);color:var(--blue-l);border:1px solid rgba(26,86,219,.25);border-radius:var(--radius);padding:11px;font-family:'DM Sans',sans-serif;font-size:.77rem;font-weight:600;width:calc(100% - 28px);margin:0 14px 14px;cursor:pointer;display:block" onclick="cGoTo('c-home')">🔄 Book Another Service</button>
         </div>
@@ -528,7 +490,7 @@ body{
 
       <!-- BOOKINGS TAB -->
       <div class="scr" id="c-bookings">
-        <div class="app-hdr"><div class="hdr-wordmark">Al Rukam <span>Clean</span></div></div>
+        <div class="app-hdr"><div class="hdr-wordmark">CleanPro <span>App</span></div></div>
         <div class="scrl">
           <div style="padding:14px 14px 6px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;font-weight:700;color:var(--slate);letter-spacing:-.2px">My Bookings</div>
           <div id="c-bk-list"></div>
@@ -541,7 +503,7 @@ body{
         </div>
       </div>
 
-      <!-- BOOKING DETAIL -->
+      <!-- BOOKING DETAIL (CLIENT) -->
       <div class="scr" id="c-bk-detail">
         <div class="back-hdr" style="padding-bottom:0"><button class="back-btn" onclick="cGoBack()">‹</button><h2>Booking Details</h2></div>
         <div class="det-hdr-block">
@@ -553,8 +515,8 @@ body{
         <div class="scrl">
           <div id="det-status-banner"></div>
           <div class="det-section"><div class="det-section-title">Booking Info</div><div class="det-card" id="det-info"></div></div>
-          <div class="det-section" style="margin-top:12px"><div class="det-section-title">Client Details</div><div class="det-card" id="det-client"></div></div>
-          <div class="det-section" style="margin-top:12px"><div class="det-section-title">Cleaner Assigned</div><div class="det-card" id="det-cleaner"></div></div>
+          <div class="det-section" style="margin-top:12px"><div class="det-section-title">Your Details</div><div class="det-card" id="det-client"></div></div>
+          <div class="det-section" style="margin-top:12px"><div class="det-section-title">Your Cleaner</div><div class="det-card" id="det-cleaner"></div></div>
           <div style="height:16px"></div>
         </div>
       </div>
@@ -565,19 +527,23 @@ body{
           <div style="background:linear-gradient(145deg,var(--blue-d),var(--blue-l));padding:38px 16px 22px;display:flex;flex-direction:column;align-items:center;gap:8px">
             <div style="width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff">GU</div>
             <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.92rem;font-weight:700;color:#fff">Guest User</div>
-            <div style="font-size:.58rem;color:rgba(255,255,255,.6);background:rgba(255,255,255,.12);padding:2px 10px;border-radius:100px;border:1px solid rgba(255,255,255,.15)">Al Rukam Clean Client</div>
+            <div style="font-size:.58rem;color:rgba(255,255,255,.6);background:rgba(255,255,255,.12);padding:2px 10px;border-radius:100px;border:1px solid rgba(255,255,255,.15)">CleanPro Client</div>
           </div>
           <div class="stats-row" style="margin-top:14px">
             <div class="stat"><div class="stat-n" id="c-pstat">0</div><div class="stat-l">Bookings</div></div>
             <div class="stat"><div class="stat-n">5.0★</div><div class="stat-l">Rated</div></div>
-            <div class="stat" style="border-right:none"><div class="stat-n">AE</div><div class="stat-l">Dubai</div></div>
+            <div class="stat" style="border-right:none"><div class="stat-n">City</div><div class="stat-l">Wide</div></div>
           </div>
           <div style="padding:14px">
             <div style="font-size:.6rem;font-weight:600;color:var(--neutral);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">Account</div>
             <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--blue-xs)">👤</div><div class="pmenu-tx">Personal Details</div><div class="pmenu-ar">›</div></div>
-            <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--teal-xs)">📍</div><div class="pmenu-tx">Saved Addresses</div><div class="pmenu-ar">›</div></div>
+            <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--emerald-xs)">📍</div><div class="pmenu-tx">Saved Addresses</div><div class="pmenu-ar">›</div></div>
             <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--green-xs)">💳</div><div class="pmenu-tx">Payment Methods</div><div class="pmenu-ar">›</div></div>
-            <div class="pmenu-item" style="margin-bottom:0"><div class="pmenu-ic" style="background:var(--amber-l)">🔔</div><div class="pmenu-tx">Notifications</div><div class="pmenu-ar">›</div></div>
+            <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--amber-l)">🔔</div><div class="pmenu-tx">Notifications</div><div class="pmenu-ar">›</div></div>
+            <div style="margin-top:16px;font-size:.6rem;font-weight:600;color:var(--neutral);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">Support</div>
+            <div class="pmenu-item" onclick="window.open('tel:+12345678901')"><div class="pmenu-ic" style="background:var(--green-xs)">📞</div><div class="pmenu-tx">Call: +1 234 567 8901</div><div class="pmenu-ar">›</div></div>
+            <div class="pmenu-item" onclick="window.open('https://wa.me/12345678901')"><div class="pmenu-ic" style="background:var(--green-xs)">💬</div><div class="pmenu-tx">WhatsApp Support</div><div class="pmenu-ar">›</div></div>
+            <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--blue-xs)">⭐</div><div class="pmenu-tx">Rate Our App</div><div class="pmenu-ar">›</div></div>
           </div>
         </div>
         <div class="bot-nav">
@@ -587,7 +553,7 @@ body{
         </div>
       </div>
 
-      <!-- NOTIFICATIONS CLIENT -->
+      <!-- CLIENT NOTIFICATIONS -->
       <div class="scr" id="c-notifs">
         <div class="back-hdr"><button class="back-btn" onclick="cGoBack()">‹</button><h2>Notifications</h2></div>
         <div class="scrl">
@@ -599,330 +565,159 @@ body{
   </div>
 </div>
 
-<!-- ================== CLEANER ================== -->
+<!-- ========== OWNER / CLEANER ========== -->
 <div class="phone-col">
-  <div class="phone-tag cleaner">🧹 Cleaner Portal</div>
+  <div class="phone-tag owner">🧹 Your Business App</div>
   <div class="phone-outer">
     <div class="btn-s vu"></div><div class="btn-s vd"></div><div class="btn-s pw"></div>
-    <div class="phone-screen" id="kps">
+    <div class="phone-screen" id="ops">
 
-      <div class="toast toast-cleaner" id="k-toast">
+      <div class="toast toast-owner" id="o-toast">
         <div class="toast-ic">📋</div>
-        <div class="toast-body"><h5>New Job!</h5><p id="k-toast-p">A new booking is waiting.</p></div>
-        <button class="toast-x" onclick="document.getElementById('k-toast').classList.remove('show')">✕</button>
-      </div>
-
-      <!-- LOGIN -->
-      <div class="scr active" id="k-login">
-        <div class="login-wrap">
-          <div class="login-logo">🧹</div>
-          <h2>Cleaner Portal</h2>
-          <p>Sign in to manage your jobs and schedule</p>
-          <div style="width:100%">
-            <div class="cl-fld"><label>Email</label><input type="email" id="cl-email" placeholder="rashid@alrukam.ae" value="rashid@alrukam.ae"></div>
-            <div class="cl-fld"><label>Password</label><input type="password" id="cl-pass" placeholder="••••••••" value="password123"></div>
-            <button class="cl-login-btn" onclick="kLogin()">Sign In →</button>
-          </div>
-          <div class="login-hint">Demo: <span>rashid@alrukam.ae</span> · any password</div>
-        </div>
+        <div class="toast-body"><h5>New Booking!</h5><p id="o-toast-p">A new job is waiting.</p></div>
+        <button class="toast-x" onclick="document.getElementById('o-toast').classList.remove('show')">✕</button>
       </div>
 
       <!-- DASHBOARD -->
-      <div class="scr" id="k-dash">
-        <div class="cyan-hdr">
-          <div class="hdr-wordmark">Al Rukam <span style="color:var(--teal-d)">Pro</span></div>
-          <div style="position:relative">
-            <button class="hdr-ico" onclick="kSwNav('k-notifs',null)">🔔</button>
-            <span class="nbadge" id="k-hdr-badge" style="display:none">0</span>
+      <div class="scr active" id="o-dash">
+        <div class="ow-hero">
+          <div class="ow-greeting">Good morning 👋</div>
+          <div class="ow-name">Alex Johnson</div>
+          <div class="ow-sub">Your Cleaning Business · Solo Pro</div>
+          <div class="ow-status-row">
+            <div class="ow-status-dot"></div>
+            <div class="ow-status-txt">Available · Ready for jobs</div>
           </div>
         </div>
+        <div class="ow-earnings-row">
+          <div class="ow-earn-card"><div class="ow-earn-n" id="o-earn-today">$0</div><div class="ow-earn-l">Today</div></div>
+          <div class="ow-earn-card"><div class="ow-earn-n" id="o-earn-week">$240</div><div class="ow-earn-l">This Week</div></div>
+          <div class="ow-earn-card"><div class="ow-earn-n" id="o-earn-pend">0</div><div class="ow-earn-l">Pending</div></div>
+        </div>
         <div class="scrl">
-          <div class="cl-hero">
-            <div class="cl-hero-tag">Good morning 👋</div>
-            <h3>MD Rashid</h3>
-            <p>Senior Cleaner · Dubai Al Quoz & Jebel Ali</p>
-            <div class="online-dot"><span class="dot"></span><span class="lbl">Available for jobs</span></div>
+          <div style="height:8px"></div>
+          <div class="sec-title" style="padding:0 14px;margin:10px 0 8px">New Job Requests</div>
+          <div id="o-dash-jobs">
+            <div style="padding:6px 14px 8px;font-size:.66rem;color:var(--neutral)">No new jobs yet. They'll appear when clients book.</div>
           </div>
-          <div class="cl-stats">
-            <div class="cl-stat"><div class="n" id="k-stat-new">0</div><div class="l">New Jobs</div></div>
-            <div class="cl-stat"><div class="n" id="k-stat-acc">0</div><div class="l">Accepted</div></div>
-            <div class="cl-stat"><div class="n">24</div><div class="l">Completed</div></div>
-          </div>
-          <div class="sec-title" style="padding:0 14px;margin:14px 0 8px">New Job Requests</div>
-          <div id="k-dash-jobs"><div style="padding:6px 14px 12px;font-size:.66rem;color:var(--neutral)">No new jobs yet. They'll appear when clients book.</div></div>
           <div class="sec-title" style="padding:0 14px;margin:10px 0 8px">Today's Schedule</div>
-          <div id="k-dash-schedule">
+          <div id="o-dash-schedule">
             <div class="sched-card">
               <div class="sched-date"><div class="sched-day">MON</div><div class="sched-num">27</div></div>
-              <div class="sched-info"><h4>Villa Deep Cleaning</h4><p>JLT Cluster A, Villa 7 · 9:00 AM</p></div>
+              <div class="sched-info"><h4>Villa Deep Cleaning</h4><p>14 Maple Street · 9:00 AM</p></div>
               <span class="pill pill-acc">Confirmed</span>
             </div>
           </div>
           <div style="height:14px"></div>
         </div>
-        <div class="bot-nav teal-nav">
-          <button class="nav-it active" onclick="kSwNav('k-dash',this)"><span class="nav-ic">🏠</span><span class="nav-lb">Dashboard</span></button>
-          <button class="nav-it" onclick="kSwNav('k-jobs',this)">
-            <div class="nav-ic-wrap"><span class="nav-ic">📋</span><span class="nbadge" id="k-jobs-badge" style="display:none">0</span></div>
+        <div class="em-bot-nav em-nav">
+          <button class="nav-it active" onclick="oSwNav('o-dash',this)"><span class="nav-ic">🏠</span><span class="nav-lb">Home</span></button>
+          <button class="nav-it" onclick="oSwNav('o-jobs',this)">
+            <div class="nav-ic-wrap"><span class="nav-ic">📋</span><span class="nbadge" id="o-jobs-badge" style="display:none">0</span></div>
             <span class="nav-lb">Jobs</span>
           </button>
-          <button class="nav-it" onclick="kSwNav('k-notifs',this)">
-            <div class="nav-ic-wrap"><span class="nav-ic">🔔</span><span class="nbadge" id="k-bell-badge" style="display:none">0</span></div>
+          <button class="nav-it" onclick="oSwNav('o-notifs',this)">
+            <div class="nav-ic-wrap"><span class="nav-ic">🔔</span><span class="nbadge" id="o-bell-badge" style="display:none">0</span></div>
             <span class="nav-lb">Alerts</span>
           </button>
-          <button class="nav-it" onclick="kSwNav('k-profile',this)"><span class="nav-ic">👤</span><span class="nav-lb">Profile</span></button>
+          <button class="nav-it" onclick="oSwNav('o-income',this)"><span class="nav-ic">💰</span><span class="nav-lb">Income</span></button>
         </div>
       </div>
 
       <!-- JOBS TAB -->
-      <div class="scr" id="k-jobs">
-        <div class="cyan-hdr"><div class="hdr-wordmark">Al Rukam <span style="color:var(--teal-d)">Pro</span></div></div>
+      <div class="scr" id="o-jobs">
+        <div class="em-hdr">
+          <div class="hdr-wordmark">My <span style="color:var(--emerald-d)">Jobs</span></div>
+        </div>
         <div class="scrl">
           <div style="padding:14px 14px 6px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;font-weight:700;color:var(--slate);letter-spacing:-.2px">All Jobs</div>
-          <div id="k-jobs-list"></div>
+          <div id="o-jobs-list"></div>
           <div style="height:14px"></div>
         </div>
-        <div class="bot-nav teal-nav">
-          <button class="nav-it" onclick="kSwNav('k-dash',this)"><span class="nav-ic">🏠</span><span class="nav-lb">Dashboard</span></button>
-          <button class="nav-it active" onclick="kSwNav('k-jobs',this)">
-            <div class="nav-ic-wrap"><span class="nav-ic">📋</span><span class="nbadge" id="k-jobs-badge2" style="display:none">0</span></div>
+        <div class="em-bot-nav em-nav">
+          <button class="nav-it" onclick="oSwNav('o-dash',this)"><span class="nav-ic">🏠</span><span class="nav-lb">Home</span></button>
+          <button class="nav-it active" onclick="oSwNav('o-jobs',this)">
+            <div class="nav-ic-wrap"><span class="nav-ic">📋</span><span class="nbadge" id="o-jobs-badge2" style="display:none">0</span></div>
             <span class="nav-lb">Jobs</span>
           </button>
-          <button class="nav-it" onclick="kSwNav('k-notifs',this)"><span class="nav-ic">🔔</span><span class="nav-lb">Alerts</span></button>
-          <button class="nav-it" onclick="kSwNav('k-profile',this)"><span class="nav-ic">👤</span><span class="nav-lb">Profile</span></button>
+          <button class="nav-it" onclick="oSwNav('o-notifs',this)"><span class="nav-ic">🔔</span><span class="nav-lb">Alerts</span></button>
+          <button class="nav-it" onclick="oSwNav('o-income',this)"><span class="nav-ic">💰</span><span class="nav-lb">Income</span></button>
         </div>
       </div>
 
-      <!-- NOTIFICATIONS CLEANER -->
-      <div class="scr" id="k-notifs">
-        <div class="cyan-back-hdr"><button class="back-btn" onclick="kGoBack()">‹</button><h2>Notifications</h2></div>
+      <!-- NOTIFICATIONS -->
+      <div class="scr" id="o-notifs">
+        <div class="em-back-hdr"><button class="back-btn" onclick="oGoBack()">‹</button><h2>Notifications</h2></div>
         <div class="scrl">
-          <div id="k-notif-list"></div>
+          <div id="o-notif-list"></div>
           <div style="height:14px"></div>
         </div>
-        <div class="bot-nav teal-nav">
-          <button class="nav-it" onclick="kSwNav('k-dash',this)"><span class="nav-ic">🏠</span><span class="nav-lb">Dashboard</span></button>
-          <button class="nav-it" onclick="kSwNav('k-jobs',this)"><span class="nav-ic">📋</span><span class="nav-lb">Jobs</span></button>
-          <button class="nav-it active" onclick="kSwNav('k-notifs',this)"><span class="nav-ic">🔔</span><span class="nav-lb">Alerts</span></button>
-          <button class="nav-it" onclick="kSwNav('k-profile',this)"><span class="nav-ic">👤</span><span class="nav-lb">Profile</span></button>
+        <div class="em-bot-nav em-nav">
+          <button class="nav-it" onclick="oSwNav('o-dash',this)"><span class="nav-ic">🏠</span><span class="nav-lb">Home</span></button>
+          <button class="nav-it" onclick="oSwNav('o-jobs',this)"><span class="nav-ic">📋</span><span class="nav-lb">Jobs</span></button>
+          <button class="nav-it active" onclick="oSwNav('o-notifs',this)"><span class="nav-ic">🔔</span><span class="nav-lb">Alerts</span></button>
+          <button class="nav-it" onclick="oSwNav('o-income',this)"><span class="nav-ic">💰</span><span class="nav-lb">Income</span></button>
         </div>
       </div>
 
       <!-- JOB DETAIL -->
-      <div class="scr" id="k-job-detail">
-        <div class="cyan-back-hdr" style="padding-bottom:0"><button class="back-btn" onclick="kGoBack()">‹</button><h2>Job Details</h2></div>
+      <div class="scr" id="o-job-detail">
+        <div class="em-back-hdr" style="padding-bottom:0"><button class="back-btn" onclick="oGoBack()">‹</button><h2>Job Details</h2></div>
         <div style="background:var(--surface);border-bottom:1px solid var(--border);padding:10px 14px 14px;flex-shrink:0">
-          <div style="background:var(--teal-xs);border:1px solid rgba(8,145,178,.12);border-radius:var(--radius);padding:11px 13px;display:flex;align-items:center;gap:10px">
-            <div id="kdet-em" style="font-size:22px">🏡</div>
-            <div><h3 id="kdet-name" style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;font-weight:700;color:var(--teal-d)">Service</h3><p id="kdet-sub" style="font-size:.58rem;color:var(--neutral);margin-top:2px">Details</p></div>
+          <div style="background:var(--emerald-xs);border:1px solid rgba(5,150,105,.14);border-radius:var(--radius);padding:11px 13px;display:flex;align-items:center;gap:10px">
+            <div id="odet-em" style="font-size:22px">🏡</div>
+            <div><h3 id="odet-name" style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;font-weight:700;color:var(--emerald-d)">Service</h3><p id="odet-sub" style="font-size:.58rem;color:var(--neutral);margin-top:2px">Details</p></div>
           </div>
         </div>
         <div class="scrl">
-          <div id="kdet-status-row"></div>
+          <div id="odet-status-row"></div>
           <div style="padding:12px 14px 0">
-            <div style="font-size:.6rem;font-weight:600;color:var(--neutral);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;display:flex;align-items:center;gap:6px"><span style="display:block;width:3px;height:11px;background:var(--teal-l);border-radius:2px"></span>Job Information</div>
-            <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--sh-sm)" id="kdet-info"></div>
+            <div style="font-size:.6rem;font-weight:600;color:var(--neutral);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;display:flex;align-items:center;gap:6px"><span style="display:block;width:3px;height:11px;background:var(--emerald-l);border-radius:2px"></span>Job Information</div>
+            <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--sh-sm)" id="odet-info"></div>
           </div>
           <div style="padding:12px 14px 0">
-            <div style="font-size:.6rem;font-weight:600;color:var(--neutral);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;display:flex;align-items:center;gap:6px"><span style="display:block;width:3px;height:11px;background:var(--teal-l);border-radius:2px"></span>Client Details</div>
-            <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--sh-sm)" id="kdet-client"></div>
+            <div style="font-size:.6rem;font-weight:600;color:var(--neutral);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;display:flex;align-items:center;gap:6px"><span style="display:block;width:3px;height:11px;background:var(--emerald-l);border-radius:2px"></span>Client Details</div>
+            <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--sh-sm)" id="odet-client"></div>
           </div>
-          <div id="kdet-actions" style="padding:14px"></div>
+          <div id="odet-actions" style="padding:14px"></div>
         </div>
       </div>
 
-      <!-- PROFILE CLEANER -->
-      <div class="scr" id="k-profile">
+      <!-- INCOME TAB -->
+      <div class="scr" id="o-income">
+        <div class="income-bar">
+          <h3>Total Earnings</h3>
+          <div class="income-total" id="o-income-total">$240</div>
+          <div class="income-sub" id="o-income-sub">3 completed jobs this week</div>
+        </div>
         <div class="scrl">
-          <div style="background:linear-gradient(145deg,var(--teal-d),var(--teal-l));padding:38px 16px 22px;display:flex;flex-direction:column;align-items:center;gap:8px">
-            <div style="width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:#fff">MR</div>
-            <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;font-weight:700;color:#fff">MD Rashid</div>
-            <div style="font-size:.56rem;color:rgba(255,255,255,.65);background:rgba(255,255,255,.12);padding:2px 10px;border-radius:100px;border:1px solid rgba(255,255,255,.15)">Senior Cleaner · ID #AR-007</div>
-          </div>
-          <div class="cl-stats" style="margin-top:14px">
-            <div class="cl-stat"><div class="n">5.0★</div><div class="l">Rating</div></div>
-            <div class="cl-stat"><div class="n" id="k-p-acc">0</div><div class="l">Accepted</div></div>
-            <div class="cl-stat"><div class="n">100%</div><div class="l">On-Time</div></div>
-          </div>
-          <div style="padding:14px">
-            <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--teal-xs)">📍</div><div class="pmenu-tx">Zone: Al Quoz & Jebel Ali</div></div>
-            <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--teal-xs)">📅</div><div class="pmenu-tx">Sun–Fri, 8:00am – 6:00pm</div></div>
-            <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--teal-xs)">🧹</div><div class="pmenu-tx">Deep, AC Duct, Office Cleaning</div></div>
-            <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--teal-xs)">💳</div><div class="pmenu-tx">Emirates NBD ····4421</div></div>
-            <div style="margin-top:6px"><button style="width:100%;background:var(--surface);color:var(--red);border:1px solid rgba(220,38,38,.18);border-radius:var(--radius);padding:11px;font-family:'DM Sans',sans-serif;font-size:.74rem;font-weight:600;cursor:pointer" onclick="kLogout()">🚪 Sign Out</button></div>
-          </div>
-        </div>
-        <div class="bot-nav teal-nav">
-          <button class="nav-it" onclick="kSwNav('k-dash',this)"><span class="nav-ic">🏠</span><span class="nav-lb">Dashboard</span></button>
-          <button class="nav-it" onclick="kSwNav('k-jobs',this)"><span class="nav-ic">📋</span><span class="nav-lb">Jobs</span></button>
-          <button class="nav-it" onclick="kSwNav('k-notifs',this)"><span class="nav-ic">🔔</span><span class="nav-lb">Alerts</span></button>
-          <button class="nav-it active" onclick="kSwNav('k-profile',this)"><span class="nav-ic">👤</span><span class="nav-lb">Profile</span></button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ================== ADMIN ================== -->
-<div class="phone-col">
-  <div class="phone-tag admin">⚙️ Admin Dashboard</div>
-  <div class="phone-outer">
-    <div class="btn-s vu"></div><div class="btn-s vd"></div><div class="btn-s pw"></div>
-    <div class="phone-screen" id="aps">
-
-      <div class="toast toast-admin" id="a-toast">
-        <div class="toast-ic">📊</div>
-        <div class="toast-body"><h5 id="a-toast-h">New Booking</h5><p id="a-toast-p">A new booking arrived.</p></div>
-        <button class="toast-x" onclick="document.getElementById('a-toast').classList.remove('show')">✕</button>
-      </div>
-
-      <!-- ADMIN LOGIN -->
-      <div class="scr active" id="a-login">
-        <div class="adm-login-wrap">
-          <div class="adm-login-logo">⚙️</div>
-          <h2>Admin Panel</h2>
-          <p>Al Rukam Clean Management System</p>
-          <div style="width:100%">
-            <div class="adm-fld"><label>Admin Email</label><input type="email" id="adm-email" placeholder="admin@alrukam.ae" value="admin@alrukam.ae"></div>
-            <div class="adm-fld"><label>Password</label><input type="password" id="adm-pass" placeholder="••••••••" value="admin123"></div>
-            <button class="adm-login-btn" onclick="aLogin()">Access Dashboard →</button>
-          </div>
-          <div style="font-size:.55rem;color:rgba(255,255,255,.35);margin-top:12px;text-align:center">Demo: admin@alrukam.ae · any password</div>
-        </div>
-      </div>
-
-      <!-- ADMIN DASHBOARD -->
-      <div class="scr" id="a-dash">
-        <div class="dark-hdr">
-          <div class="hdr-wordmark">Admin <span>Panel</span></div>
-          <div style="display:flex;gap:7px">
-            <div style="position:relative">
-              <button class="hdr-ico" onclick="aSwNav('a-bookings',null)">🔔</button>
-              <span class="nbadge" id="a-badge" style="display:none">0</span>
+          <div style="margin:12px 14px 0;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+            <div style="background:var(--surface);border-radius:var(--radius);padding:10px 7px;border:1px solid var(--border);text-align:center;box-shadow:var(--sh-sm)">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;font-weight:700;color:var(--emerald-d)" id="o-inc-acc">0</div>
+              <div style="font-size:.49rem;color:var(--neutral);font-weight:500;text-transform:uppercase;letter-spacing:.3px;margin-top:2px">Accepted</div>
+            </div>
+            <div style="background:var(--surface);border-radius:var(--radius);padding:10px 7px;border:1px solid var(--border);text-align:center;box-shadow:var(--sh-sm)">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;font-weight:700;color:var(--amber)" id="o-inc-pend">0</div>
+              <div style="font-size:.49rem;color:var(--neutral);font-weight:500;text-transform:uppercase;letter-spacing:.3px;margin-top:2px">Pending</div>
+            </div>
+            <div style="background:var(--surface);border-radius:var(--radius);padding:10px 7px;border:1px solid var(--border);text-align:center;box-shadow:var(--sh-sm)">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;font-weight:700;color:var(--slate)">3</div>
+              <div style="font-size:.49rem;color:var(--neutral);font-weight:500;text-transform:uppercase;letter-spacing:.3px;margin-top:2px">Done</div>
             </div>
           </div>
-        </div>
-        <div class="scrl">
-          <div class="adm-welcome">
-            <div>
-              <div style="font-size:.57rem;color:var(--teal-l);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px">Welcome back 👋</div>
-              <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;font-weight:700;color:#fff;letter-spacing:-.2px">Al Rukam Clean HQ</div>
-              <div style="font-size:.57rem;color:rgba(255,255,255,.45);margin-top:2px">Dubai, UAE · info@alrukam.ae</div>
-            </div>
-            <div style="width:38px;height:38px;border-radius:var(--radius-sm);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:17px">🏢</div>
-          </div>
-          <div class="adm-stat-grid">
-            <div class="adm-stat-card blue"><div class="adm-stat-ic">📋</div><div class="adm-stat-n" id="a-total-bk">0</div><div class="adm-stat-l">Total Bookings</div></div>
-            <div class="adm-stat-card cyan"><div class="adm-stat-ic">⏳</div><div class="adm-stat-n" id="a-pending-bk">0</div><div class="adm-stat-l">Pending</div></div>
-            <div class="adm-stat-card green"><div class="adm-stat-ic">✅</div><div class="adm-stat-n" id="a-acc-bk">0</div><div class="adm-stat-l">Accepted</div></div>
-            <div class="adm-stat-card red"><div class="adm-stat-ic">👷</div><div class="adm-stat-n">30+</div><div class="adm-stat-l">Team Members</div></div>
-          </div>
-          <div class="sec-title" style="padding:0 14px;margin:14px 0 8px">Recent Bookings</div>
-          <div id="a-recent-bk"><div style="padding:5px 14px 12px;font-size:.66rem;color:var(--neutral)">No bookings yet. They appear when clients book.</div></div>
-          <div class="sec-title" style="padding:0 14px;margin:12px 0 8px">Our Team</div>
-          <div class="adm-cleaner-row"><div class="adm-av">MR</div><div class="adm-cl-info"><h4>MD Rashid</h4><p>Senior Cleaner · Al Quoz & Jebel Ali</p></div><span class="online-badge on">Online</span></div>
-          <div class="adm-cleaner-row"><div class="adm-av" style="background:linear-gradient(135deg,var(--teal-d),var(--teal-l))">MA</div><div class="adm-cl-info"><h4>Mohammed Anwar</h4><p>Specialist · Marina & JLT</p></div><span class="online-badge on">Online</span></div>
-          <div class="adm-cleaner-row"><div class="adm-av" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">MH</div><div class="adm-cl-info"><h4>Mahboob & Faizal</h4><p>Deep Clean Team · Downtown</p></div><span class="online-badge off">Offline</span></div>
-          <div style="height:14px"></div>
-        </div>
-        <div class="bot-nav dark-bot-nav">
-          <button class="nav-it active" onclick="aSwNav('a-dash',this)"><span class="nav-ic">📊</span><span class="nav-lb" style="color:var(--teal-l)">Overview</span></button>
-          <button class="nav-it" onclick="aSwNav('a-bookings',this)">
-            <div class="nav-ic-wrap"><span class="nav-ic">📋</span><span class="nbadge" id="a-bk-badge" style="display:none">0</span></div>
-            <span class="nav-lb" style="color:rgba(255,255,255,.4)">Bookings</span>
-          </button>
-          <button class="nav-it" onclick="aSwNav('a-team',this)"><span class="nav-ic">👷</span><span class="nav-lb" style="color:rgba(255,255,255,.4)">Team</span></button>
-          <button class="nav-it" onclick="aSwNav('a-settings',this)"><span class="nav-ic">⚙️</span><span class="nav-lb" style="color:rgba(255,255,255,.4)">Settings</span></button>
-        </div>
-      </div>
-
-      <!-- ADMIN BOOKINGS -->
-      <div class="scr" id="a-bookings">
-        <div class="dark-hdr"><div class="hdr-wordmark">Admin <span>Panel</span></div></div>
-        <div class="scrl">
-          <div style="padding:14px 14px 6px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;font-weight:700;color:var(--slate);letter-spacing:-.2px">All Bookings</div>
-          <div id="a-bk-list"></div>
-          <div style="height:14px"></div>
-        </div>
-        <div class="bot-nav dark-bot-nav">
-          <button class="nav-it" onclick="aSwNav('a-dash',this)"><span class="nav-ic">📊</span><span class="nav-lb" style="color:rgba(255,255,255,.4)">Overview</span></button>
-          <button class="nav-it active" onclick="aSwNav('a-bookings',this)">
-            <div class="nav-ic-wrap"><span class="nav-ic">📋</span><span class="nbadge" id="a-bk-badge2" style="display:none">0</span></div>
-            <span class="nav-lb" style="color:var(--teal-l)">Bookings</span>
-          </button>
-          <button class="nav-it" onclick="aSwNav('a-team',this)"><span class="nav-ic">👷</span><span class="nav-lb" style="color:rgba(255,255,255,.4)">Team</span></button>
-          <button class="nav-it" onclick="aSwNav('a-settings',this)"><span class="nav-ic">⚙️</span><span class="nav-lb" style="color:rgba(255,255,255,.4)">Settings</span></button>
-        </div>
-      </div>
-
-      <!-- ADMIN BOOKING DETAIL -->
-      <div class="scr" id="a-bk-detail">
-        <div class="dark-back-hdr" style="padding-bottom:0"><button class="back-btn" onclick="aGoBack()">‹</button><h2>Booking Detail</h2></div>
-        <div style="background:var(--slate);padding:10px 14px 14px;flex-shrink:0">
-          <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:11px 13px;display:flex;align-items:center;gap:10px">
-            <div id="adet-em" style="font-size:22px">🏡</div>
-            <div><h3 id="adet-name" style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;font-weight:700;color:#fff">Service</h3><p id="adet-sub" style="font-size:.58rem;color:rgba(255,255,255,.5);margin-top:2px">Details</p></div>
-          </div>
-        </div>
-        <div class="scrl">
-          <div id="adet-status-row"></div>
-          <div style="padding:12px 14px 0">
-            <div style="font-size:.6rem;font-weight:600;color:var(--neutral);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;display:flex;align-items:center;gap:6px"><span style="display:block;width:3px;height:11px;background:var(--blue-l);border-radius:2px"></span>Booking Info</div>
-            <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--sh-sm)" id="adet-info"></div>
-          </div>
-          <div style="padding:12px 14px 0">
-            <div style="font-size:.6rem;font-weight:600;color:var(--neutral);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;display:flex;align-items:center;gap:6px"><span style="display:block;width:3px;height:11px;background:var(--blue-l);border-radius:2px"></span>Client Details</div>
-            <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--sh-sm)" id="adet-client"></div>
-          </div>
-          <div style="padding:12px 14px 0">
-            <div style="font-size:.6rem;font-weight:600;color:var(--neutral);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;display:flex;align-items:center;gap:6px"><span style="display:block;width:3px;height:11px;background:var(--blue-l);border-radius:2px"></span>Assign Cleaner</div>
-            <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);padding:12px 13px;box-shadow:var(--sh-sm)" id="adet-assign"></div>
-          </div>
-          <div id="adet-actions" style="padding:14px"></div>
-        </div>
-      </div>
-
-      <!-- ADMIN TEAM -->
-      <div class="scr" id="a-team">
-        <div class="dark-hdr"><div class="hdr-wordmark">Admin <span>Panel</span></div></div>
-        <div class="scrl">
-          <div style="padding:14px 14px 6px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;font-weight:700;color:var(--slate);letter-spacing:-.2px">Our Team (30+)</div>
-          <div class="adm-cleaner-row" style="cursor:pointer"><div class="adm-av">MR</div><div class="adm-cl-info"><h4>MD Rashid</h4><p>Senior Cleaner · 5.0★ · 24 jobs done</p></div><span class="online-badge on">Online</span></div>
-          <div class="adm-cleaner-row" style="cursor:pointer"><div class="adm-av" style="background:linear-gradient(135deg,var(--teal-d),var(--teal-l))">MA</div><div class="adm-cl-info"><h4>Mohammed Anwar</h4><p>Specialist · 5.0★ · 31 jobs done</p></div><span class="online-badge on">Online</span></div>
-          <div class="adm-cleaner-row" style="cursor:pointer"><div class="adm-av" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">MF</div><div class="adm-cl-info"><h4>Mahboob & Faizal</h4><p>Deep Clean Team · 5.0★ · 18 jobs</p></div><span class="online-badge off">Offline</span></div>
-          <div class="adm-cleaner-row" style="cursor:pointer"><div class="adm-av" style="background:linear-gradient(135deg,#0277bd,#29b6f6)">AH</div><div class="adm-cl-info"><h4>Anwar Hossain</h4><p>Office Specialist · 5.0★ · 15 jobs</p></div><span class="online-badge on">Online</span></div>
-          <div class="adm-cleaner-row" style="cursor:pointer"><div class="adm-av" style="background:linear-gradient(135deg,#b45309,#f59e0b)">KT</div><div class="adm-cl-info"><h4>Khalid Team</h4><p>AC Duct Expert · 4.9★ · 22 jobs</p></div><span class="online-badge off">Offline</span></div>
-          <div style="height:14px"></div>
-        </div>
-        <div class="bot-nav dark-bot-nav">
-          <button class="nav-it" onclick="aSwNav('a-dash',this)"><span class="nav-ic">📊</span><span class="nav-lb" style="color:rgba(255,255,255,.4)">Overview</span></button>
-          <button class="nav-it" onclick="aSwNav('a-bookings',this)"><span class="nav-ic">📋</span><span class="nav-lb" style="color:rgba(255,255,255,.4)">Bookings</span></button>
-          <button class="nav-it active" onclick="aSwNav('a-team',this)"><span class="nav-ic">👷</span><span class="nav-lb" style="color:var(--teal-l)">Team</span></button>
-          <button class="nav-it" onclick="aSwNav('a-settings',this)"><span class="nav-ic">⚙️</span><span class="nav-lb" style="color:rgba(255,255,255,.4)">Settings</span></button>
-        </div>
-      </div>
-
-      <!-- ADMIN SETTINGS -->
-      <div class="scr" id="a-settings">
-        <div class="dark-hdr"><div class="hdr-wordmark">Admin <span>Panel</span></div></div>
-        <div class="scrl">
-          <div style="padding:14px 14px 6px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;font-weight:700;color:var(--slate);letter-spacing:-.2px">Settings</div>
-          <div style="padding:0 14px">
-            <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--blue-xs)">🏢</div><div class="pmenu-tx">Business Profile</div><div class="pmenu-ar">›</div></div>
-            <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--amber-l)">🔔</div><div class="pmenu-tx">Notification Settings</div><div class="pmenu-ar">›</div></div>
-            <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--green-xs)">💰</div><div class="pmenu-tx">Pricing & Packages</div><div class="pmenu-ar">›</div></div>
-            <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--teal-xs)">📍</div><div class="pmenu-tx">Service Zones (UAE)</div><div class="pmenu-ar">›</div></div>
-            <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--blue-xs)">🌐</div><div class="pmenu-tx">Website Integration</div><div class="pmenu-ar">›</div></div>
-            <div class="pmenu-item"><div class="pmenu-ic" style="background:var(--green-xs)">💬</div><div class="pmenu-tx">WhatsApp Integration</div><div class="pmenu-ar">›</div></div>
-            <div style="margin-top:6px"><button style="width:100%;background:var(--surface);color:var(--red);border:1px solid rgba(220,38,38,.18);border-radius:var(--radius);padding:11px;font-family:'DM Sans',sans-serif;font-size:.74rem;font-weight:600;cursor:pointer" onclick="aLogout()">🚪 Sign Out</button></div>
+          <div class="sec-title" style="padding:0 14px;margin:14px 0 8px">Recent Jobs</div>
+          <div id="o-income-list">
+            <div class="income-item"><div class="income-ic">🏡</div><div class="income-info"><h4>Villa Deep Cleaning</h4><p>Mon 27 · 9:00 AM · 3 rooms</p></div><div class="income-amt">$80</div></div>
+            <div class="income-item"><div class="income-ic">🏠</div><div class="income-info"><h4>Apartment Cleaning</h4><p>Fri 24 · 11:00 AM · 2 rooms</p></div><div class="income-amt">$60</div></div>
+            <div class="income-item"><div class="income-ic">🏢</div><div class="income-info"><h4>Office Cleaning</h4><p>Wed 22 · 8:00 AM · 4 rooms</p></div><div class="income-amt">$100</div></div>
           </div>
           <div style="height:14px"></div>
         </div>
-        <div class="bot-nav dark-bot-nav">
-          <button class="nav-it" onclick="aSwNav('a-dash',this)"><span class="nav-ic">📊</span><span class="nav-lb" style="color:rgba(255,255,255,.4)">Overview</span></button>
-          <button class="nav-it" onclick="aSwNav('a-bookings',this)"><span class="nav-ic">📋</span><span class="nav-lb" style="color:rgba(255,255,255,.4)">Bookings</span></button>
-          <button class="nav-it" onclick="aSwNav('a-team',this)"><span class="nav-ic">👷</span><span class="nav-lb" style="color:rgba(255,255,255,.4)">Team</span></button>
-          <button class="nav-it active" onclick="aSwNav('a-settings',this)"><span class="nav-ic">⚙️</span><span class="nav-lb" style="color:var(--teal-l)">Settings</span></button>
+        <div class="em-bot-nav em-nav">
+          <button class="nav-it" onclick="oSwNav('o-dash',this)"><span class="nav-ic">🏠</span><span class="nav-lb">Home</span></button>
+          <button class="nav-it" onclick="oSwNav('o-jobs',this)"><span class="nav-ic">📋</span><span class="nav-lb">Jobs</span></button>
+          <button class="nav-it" onclick="oSwNav('o-notifs',this)"><span class="nav-ic">🔔</span><span class="nav-lb">Alerts</span></button>
+          <button class="nav-it active" onclick="oSwNav('o-income',this)"><span class="nav-ic">💰</span><span class="nav-lb">Income</span></button>
         </div>
       </div>
 
@@ -930,78 +725,290 @@ body{
   </div>
 </div>
 
-</div>
+</div><!-- phones-row -->
 
 <script>
-var jobs=[],cNotifs=[],kNotifs=[],aNotifs=[];
-var kLoggedIn=false,aLoggedIn=false;
-var kNewCount=0,kNotifCount=0,cNotifCount=0,aNotifCount=0;
-var CTABS=['c-home','c-bookings','c-profile'];
-var KTABS=['k-dash','k-jobs','k-notifs','k-profile'];
-var ATABS=['a-dash','a-bookings','a-team','a-settings'];
-var cCur='c-home',cHist=[];
-var kCur='k-login',kHist=[];
-var aCur='a-login',aHist=[];
+// ===== STATE =====
+var jobs = [], cNotifs = [], oNotifs = [];
+var oPendingCount = 0, oNotifCount = 0, cNotifCount = 0;
+var oTotalEarnings = 240;
+var CTABS = ['c-home','c-bookings','c-profile'];
+var OTABS = ['o-dash','o-jobs','o-notifs','o-income'];
+var cCur = 'c-home', cHist = [];
+var oCur = 'o-dash', oHist = [];
 
-function fmtDate(d){if(!d)return'TBC';var m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],p=d.split('-');return parseInt(p[2])+' '+m[parseInt(p[1])-1]+' '+p[0];}
+// ===== HELPERS =====
+function fmtDate(d){
+  if(!d)return'TBC';
+  var m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var p=d.split('-');return parseInt(p[2])+' '+m[parseInt(p[1])-1]+' '+p[0];
+}
+function mkSumRow(k,v){return'<div class="sum-row"><span class="sum-k">'+k+'</span><span class="sum-v">'+v+'</span></div>'}
+function mkDetRow(k,v){return'<div class="det-row"><span class="det-k">'+k+'</span><span class="det-v">'+v+'</span></div>'}
+function mkOwRow(k,v){return'<div class="ow-krow"><span class="k">'+k+'</span><span class="v">'+v+'</span></div>'}
+function statusPillC(s){
+  if(s==='accepted')return'<span class="pill pill-acc">Confirmed</span>';
+  if(s==='rejected')return'<span class="pill pill-rej">Declined</span>';
+  return'<span class="pill pill-pend">Pending</span>';
+}
 
-function cShow(id,push){var p=document.getElementById(cCur),n=document.getElementById(id);if(!n||id===cCur)return;if(push&&CTABS.indexOf(cCur)===-1)cHist.push(cCur);p.classList.remove('active');p.classList.add('out-l');setTimeout(function(){p.classList.remove('out-l')},340);n.style.transform='translateX(100%)';n.classList.add('active');requestAnimationFrame(function(){requestAnimationFrame(function(){n.style.transform=''})});cCur=id;var sc=n.querySelector('.scrl');if(sc)sc.scrollTop=0;}
+// ===== CLIENT NAV =====
+function cShow(id,push){
+  var p=document.getElementById(cCur),n=document.getElementById(id);
+  if(!n||id===cCur)return;
+  if(push&&CTABS.indexOf(cCur)===-1)cHist.push(cCur);
+  p.classList.remove('active');p.classList.add('out-l');
+  setTimeout(function(){p.classList.remove('out-l');},340);
+  n.style.transform='translateX(100%)';n.classList.add('active');
+  requestAnimationFrame(function(){requestAnimationFrame(function(){n.style.transform='';});});
+  cCur=id;var sc=n.querySelector('.scrl');if(sc)sc.scrollTop=0;
+}
 function cGoTo(id){cShow(id,true);}
-function cGoBack(){if(!cHist.length){cGoTo('c-home');return;}var prev=cHist.pop();var c=document.getElementById(cCur),t=document.getElementById(prev);c.classList.remove('active');c.style.transform='translateX(100%)';setTimeout(function(){c.style.transform=''},340);t.style.transform='translateX(-22%)';t.classList.add('active');requestAnimationFrame(function(){requestAnimationFrame(function(){t.style.transform=''})});cCur=prev;}
-function cSwNav(id,btn){CTABS.forEach(function(s){var el=document.getElementById(s);if(el){el.classList.remove('active','out-l');el.style.transform=''}});document.querySelectorAll('#cps .bot-nav .nav-it').forEach(function(x){x.classList.remove('active')});if(btn)btn.classList.add('active');document.getElementById(id).classList.add('active');cCur=id;cHist=[];if(id==='c-bookings')renderCBookings();if(id==='c-notifs'){cNotifCount=0;updateCBadges();renderCNotifs();}}
+function cGoBack(){
+  if(!cHist.length){cGoTo('c-home');return;}
+  var prev=cHist.pop();
+  var c=document.getElementById(cCur),t=document.getElementById(prev);
+  c.classList.remove('active');c.style.transform='translateX(100%)';
+  setTimeout(function(){c.style.transform='';},340);
+  t.style.transform='translateX(-22%)';t.classList.add('active');
+  requestAnimationFrame(function(){requestAnimationFrame(function(){t.style.transform='';});});
+  cCur=prev;
+}
+function cSwNav(id,btn){
+  CTABS.forEach(function(s){var el=document.getElementById(s);if(el){el.classList.remove('active','out-l');el.style.transform='';}});
+  document.querySelectorAll('#cps .bot-nav .nav-it').forEach(function(x){x.classList.remove('active');});
+  if(btn)btn.classList.add('active');
+  document.getElementById(id).classList.add('active');
+  cCur=id;cHist=[];
+  if(id==='c-bookings')renderCBookings();
+  if(id==='c-notifs'){cNotifCount=0;updateCBadges();renderCNotifs();}
+}
 
+// ===== CLIENT BOOKING =====
 var cSvc='',cEm='🏡',cFreq='Weekly',cRooms=2;
-function cOpenBook(svc,em){cSvc=svc;cEm=em;document.getElementById('cbk-em').textContent=em;document.getElementById('cbk-name').textContent=svc;document.getElementById('c-rcnt').textContent=cRooms;document.querySelectorAll('#c-booking .freq-btn').forEach(function(b,i){b.classList.toggle('active',i===0)});cFreq='Weekly';cGoTo('c-booking');}
-function cSelFreq(btn){document.querySelectorAll('#c-booking .freq-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');cFreq=btn.textContent;}
+
+function cOpenBook(svc,em){
+  cSvc=svc;cEm=em;
+  document.getElementById('cbk-em').textContent=em;
+  document.getElementById('cbk-name').textContent=svc;
+  document.getElementById('c-rcnt').textContent=cRooms;
+  document.querySelectorAll('#c-booking .freq-btn').forEach(function(b,i){b.classList.toggle('active',i===0);});
+  cFreq='Weekly';
+  cGoTo('c-booking');
+}
+function cSelFreq(btn){
+  document.querySelectorAll('#c-booking .freq-btn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');cFreq=btn.textContent;
+}
 function cChgR(d){cRooms=Math.max(1,Math.min(15,cRooms+d));document.getElementById('c-rcnt').textContent=cRooms;}
-function cConfirm(){var nm=document.getElementById('cf-name').value||'Client';var ph=document.getElementById('cf-phone').value||'—';var em=document.getElementById('cf-email').value||'—';var ad=document.getElementById('cf-addr').value||'Dubai, UAE';var dt=document.getElementById('cf-date').value;var tm=document.getElementById('cf-time').value;var notes=document.getElementById('cf-notes').value;var job={id:Date.now(),emoji:cEm,service:cSvc,freq:cFreq,rooms:cRooms,name:nm,phone:ph,email:em,addr:ad,date:dt,time:tm,notes:notes,status:'pending',cleaner:'—'};jobs.unshift(job);document.getElementById('c-pstat').textContent=jobs.length;var sc=document.getElementById('c-sum-card');sc.innerHTML=mkSumRow('Service',cEm+' '+cSvc)+mkSumRow('Frequency',cFreq)+mkSumRow('Rooms',cRooms+' Room'+(cRooms>1?'s':''))+mkSumRow('Name',nm)+mkSumRow('Phone',ph)+mkSumRow('Address',ad)+mkSumRow('Date & Time',(dt?fmtDate(dt):'TBC')+(tm?' at '+tm:''));cNotifs.unshift({type:'sent',title:'Booking Submitted',msg:'Your '+cSvc+' request is live. Our team will confirm shortly.',time:'Just now',jobId:job.id,read:false});cNotifCount++;updateCBadges();renderCNotifs();renderCHomeRecent();cGoTo('c-confirmed');if(kLoggedIn){setTimeout(function(){showKToast(cSvc+' request from '+nm);kNotifs.unshift({type:'new',title:'New Job Request',msg:cEm+' '+cSvc+' · '+nm+' · '+(dt?fmtDate(dt):'TBC')+(tm?' at '+tm:''),time:'Just now',jobId:job.id,read:false});kNewCount++;kNotifCount++;updateKBadges();renderKDash();renderKJobs();renderKNotifs();},1200);}if(aLoggedIn){setTimeout(function(){showAToast('New Booking: '+cSvc+' from '+nm);aNotifs.unshift({type:'new',title:'New Booking',msg:cEm+' '+cSvc+' · '+nm+' · '+ad,time:'Just now',jobId:job.id,read:false});aNotifCount++;updateABadges();renderADash();renderABookings();},800);}}
-function mkSumRow(k,v){return '<div class="sum-row"><span class="sum-k">'+k+'</span><span class="sum-v">'+v+'</span></div>';}
-function mkRow(k,v){return '<div class="det-row"><span class="det-k">'+k+'</span><span class="det-v">'+v+'</span></div>';}
-function mkKRow(k,v){return '<div style="display:flex;justify-content:space-between;padding:8px 13px;border-bottom:1px solid var(--border-l)"><span style="font-size:.6rem;color:var(--neutral)">'+k+'</span><span style="font-size:.62rem;font-weight:600;color:var(--slate);text-align:right;max-width:58%">'+v+'</span></div>';}
 
-function renderCHomeRecent(){var el=document.getElementById('c-home-recent');if(!jobs.length){el.innerHTML='<div style="padding:4px 14px 18px;font-size:.67rem;color:var(--neutral)">No bookings yet — tap a service to get started.</div>';return;}var j=jobs[0];el.innerHTML='<div style="padding:0 14px 14px"><div class="bk-card" onclick="cOpenDetail('+j.id+')"><div class="bk-card-head"><div class="bk-card-ic">'+j.emoji+'</div><div class="bk-info" style="flex:1"><h4>'+j.service+'</h4><p>'+j.freq+' · '+(j.date?fmtDate(j.date):'TBC')+'</p></div>'+statusPillC(j.status)+'</div><div class="bk-card-foot"><button class="view-det-btn">View Details →</button></div></div></div>';}
-function renderCBookings(){var el=document.getElementById('c-bk-list');if(!jobs.length){el.innerHTML='<div class="bk-empty"><div class="bk-empty-ic">📋</div><h3>No Bookings Yet</h3><p>Your cleaning appointments will appear here.</p><button class="bk-empty-btn" onclick="cSwNav(\'c-home\',null)">Book a Clean</button></div>';return;}el.innerHTML=jobs.map(function(j){return '<div class="bk-card" onclick="cOpenDetail('+j.id+')"><div class="bk-card-head"><div class="bk-card-ic">'+j.emoji+'</div><div class="bk-info" style="flex:1"><h4>'+j.service+'</h4><p>'+j.freq+' · '+j.rooms+' room'+(j.rooms>1?'s':'')+'</p></div>'+statusPillC(j.status)+'</div><div class="bk-card-body">'+mkRow('Date',(j.date?fmtDate(j.date):'TBC'))+mkRow('Address',j.addr)+'</div><div class="bk-card-foot"><button class="view-det-btn">View Full Details →</button></div></div>';}).join('');}
-function statusPillC(s){if(s==='accepted')return '<span class="pill pill-acc">Confirmed</span>';if(s==='rejected')return '<span class="pill pill-rej">Declined</span>';return '<span class="pill pill-pend">Pending</span>';}
-function cOpenDetail(jobId){var j=jobs.find(function(x){return x.id===jobId;});if(!j)return;document.getElementById('det-em').textContent=j.emoji;document.getElementById('det-name').textContent=j.service;document.getElementById('det-freq').textContent=j.freq+' · '+j.rooms+' Room'+(j.rooms>1?'s':'');var sb=document.getElementById('det-status-banner');if(j.status==='accepted'){sb.innerHTML='<div class="status-banner accepted"><span class="status-banner-ic">✅</span><div class="status-banner-txt"><h5>Booking Confirmed</h5><p>MD Rashid will handle your clean.</p></div></div>';}else if(j.status==='rejected'){sb.innerHTML='<div class="status-banner rejected"><span class="status-banner-ic">❌</span><div class="status-banner-txt"><h5>Booking Declined</h5><p>We\'re finding another cleaner for you.</p></div></div>';}else{sb.innerHTML='<div class="status-banner pending"><span class="status-banner-ic">⏳</span><div class="status-banner-txt"><h5>Awaiting Confirmation</h5><p>Our team is reviewing your request.</p></div></div>';}document.getElementById('det-info').innerHTML=mkRow('Date',(j.date?fmtDate(j.date):'TBC'))+mkRow('Time',(j.time||'TBC'))+mkRow('Frequency',j.freq)+mkRow('Rooms',j.rooms+' Room'+(j.rooms>1?'s':''))+(j.notes?mkRow('Notes',j.notes):'');document.getElementById('det-client').innerHTML=mkRow('Name',j.name)+mkRow('Phone',j.phone)+mkRow('Email',j.email)+mkRow('Address',j.addr);document.getElementById('det-cleaner').innerHTML=j.status==='accepted'?mkRow('Assigned To','MD Rashid')+mkRow('ID','#AR-007')+mkRow('Rating','5.0 ★')+mkRow('Contact','+971 52 609 9678'):mkRow('Assigned To','Awaiting assignment')+mkRow('Note','100% Satisfaction Guarantee');cGoTo('c-bk-detail');}
-function renderCNotifs(){var el=document.getElementById('c-notif-list');if(!cNotifs.length){el.innerHTML='<div style="padding:48px 20px;text-align:center"><div style="font-size:38px;opacity:.3">🔔</div><div style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:.88rem;font-weight:700;color:var(--slate);margin-top:10px">No notifications yet</div><div style="font-size:.65rem;color:var(--neutral);margin-top:4px">Book a service to get started</div></div>';return;}el.innerHTML=cNotifs.map(function(n){var ic=n.type==='accepted'?'✅':n.type==='rejected'?'❌':'📋';var cls='notif-item'+(n.read?'':' unread');var onclick=n.jobId?'onclick="n_cNotifClick('+n.jobId+')"':'';return '<div class="'+cls+'" '+onclick+'><div class="nic">'+ic+'</div><div class="ntxt" style="flex:1"><h5>'+n.title+'</h5><p>'+n.msg+'</p><div class="ntime">'+n.time+'</div></div>'+(n.read?'':'<div class="notif-dot"></div>')+'</div>';}).join('');}
-function n_cNotifClick(jobId){cNotifs.forEach(function(n){if(n.jobId===jobId)n.read=true;});renderCNotifs();cOpenDetail(jobId);}
+function cConfirm(){
+  var nm=document.getElementById('cf-name').value||'Client';
+  var ph=document.getElementById('cf-phone').value||'—';
+  var em=document.getElementById('cf-email').value||'—';
+  var ad=document.getElementById('cf-addr').value||'Your City';
+  var dt=document.getElementById('cf-date').value;
+  var tm=document.getElementById('cf-time').value;
+  var notes=document.getElementById('cf-notes').value;
+  var job={id:Date.now(),emoji:cEm,service:cSvc,freq:cFreq,rooms:cRooms,name:nm,phone:ph,email:em,addr:ad,date:dt,time:tm,notes:notes,status:'pending'};
+  jobs.unshift(job);
+  document.getElementById('c-pstat').textContent=jobs.length;
+  var sc=document.getElementById('c-sum-card');
+  sc.innerHTML=mkSumRow('Service',cEm+' '+cSvc)+mkSumRow('Frequency',cFreq)+mkSumRow('Rooms',cRooms+' Room'+(cRooms>1?'s':''))+mkSumRow('Name',nm)+mkSumRow('Phone',ph)+mkSumRow('Address',ad)+mkSumRow('Date & Time',(dt?fmtDate(dt):'TBC')+(tm?' at '+tm:''));
+  cNotifs.unshift({type:'sent',title:'Booking Submitted',msg:'Your '+cSvc+' request is live. Alex will confirm shortly.',time:'Just now',jobId:job.id,read:false});
+  cNotifCount++;updateCBadges();renderCNotifs();renderCHomeRecent();
+  cGoTo('c-confirmed');
+  // Notify owner
+  setTimeout(function(){
+    showOToast(cSvc+' from '+nm);
+    oNotifs.unshift({type:'new',title:'New Job Request',msg:cEm+' '+cSvc+' · '+nm+' · '+(dt?fmtDate(dt):'TBC')+(tm?' at '+tm:''),time:'Just now',jobId:job.id,read:false});
+    oPendingCount++;oNotifCount++;
+    updateOBadges();renderODash();renderOJobs();renderONotifs();updateOIncome();
+  },1200);
+}
+
+function renderCHomeRecent(){
+  var el=document.getElementById('c-home-recent');
+  if(!jobs.length){el.innerHTML='<div style="padding:4px 14px 18px;font-size:.67rem;color:var(--neutral)">No bookings yet — tap a service to get started.</div>';return;}
+  var j=jobs[0];
+  el.innerHTML='<div style="padding:0 14px 14px"><div class="bk-card" onclick="cOpenDetail('+j.id+')"><div class="bk-card-head"><div class="bk-card-ic">'+j.emoji+'</div><div class="bk-info" style="flex:1"><h4>'+j.service+'</h4><p>'+j.freq+' · '+(j.date?fmtDate(j.date):'TBC')+'</p></div>'+statusPillC(j.status)+'</div><div class="bk-card-foot"><button class="view-det-btn">View Details →</button></div></div></div>';
+}
+function renderCBookings(){
+  var el=document.getElementById('c-bk-list');
+  if(!jobs.length){el.innerHTML='<div class="bk-empty"><div class="bk-empty-ic">📋</div><h3>No Bookings Yet</h3><p>Your appointments will appear here.</p><button class="bk-empty-btn" onclick="cSwNav(\'c-home\',null)">Book a Clean</button></div>';return;}
+  el.innerHTML=jobs.map(function(j){return'<div class="bk-card" onclick="cOpenDetail('+j.id+')"><div class="bk-card-head"><div class="bk-card-ic">'+j.emoji+'</div><div class="bk-info" style="flex:1"><h4>'+j.service+'</h4><p>'+j.freq+' · '+j.rooms+' room'+(j.rooms>1?'s':'')+'</p></div>'+statusPillC(j.status)+'</div><div class="bk-card-body">'+mkDetRow('Date',(j.date?fmtDate(j.date):'TBC'))+mkDetRow('Address',j.addr)+'</div><div class="bk-card-foot"><button class="view-det-btn">View Full Details →</button></div></div>';}).join('');
+}
+function cOpenDetail(jobId){
+  var j=jobs.find(function(x){return x.id===jobId;});if(!j)return;
+  document.getElementById('det-em').textContent=j.emoji;
+  document.getElementById('det-name').textContent=j.service;
+  document.getElementById('det-freq').textContent=j.freq+' · '+j.rooms+' Room'+(j.rooms>1?'s':'');
+  var sb=document.getElementById('det-status-banner');
+  if(j.status==='accepted'){sb.innerHTML='<div class="status-banner accepted"><span class="status-banner-ic">✅</span><div class="status-banner-txt"><h5>Booking Confirmed</h5><p>Alex Johnson will handle your clean.</p></div></div>';}
+  else if(j.status==='rejected'){sb.innerHTML='<div class="status-banner rejected"><span class="status-banner-ic">❌</span><div class="status-banner-txt"><h5>Booking Declined</h5><p>Please contact us to reschedule.</p></div></div>';}
+  else{sb.innerHTML='<div class="status-banner pending"><span class="status-banner-ic">⏳</span><div class="status-banner-txt"><h5>Awaiting Confirmation</h5><p>Alex is reviewing your request.</p></div></div>';}
+  document.getElementById('det-info').innerHTML=mkDetRow('Date',(j.date?fmtDate(j.date):'TBC'))+mkDetRow('Time',(j.time||'TBC'))+mkDetRow('Frequency',j.freq)+mkDetRow('Rooms',j.rooms+' Room'+(j.rooms>1?'s':''))+(j.notes?mkDetRow('Notes',j.notes):'');
+  document.getElementById('det-client').innerHTML=mkDetRow('Name',j.name)+mkDetRow('Phone',j.phone)+mkDetRow('Email',j.email)+mkDetRow('Address',j.addr);
+  document.getElementById('det-cleaner').innerHTML=j.status==='accepted'?mkDetRow('Name','Alex Johnson')+mkDetRow('Experience','5 Years Pro')+mkDetRow('Rating','5.0 ★ (189)')+mkDetRow('Contact','+1 234 567 8901'):mkDetRow('Name','Alex Johnson')+mkDetRow('Status','Reviewing your request')+mkDetRow('Contact','+1 234 567 8901');
+  cGoTo('c-bk-detail');
+}
+function renderCNotifs(){
+  var el=document.getElementById('c-notif-list');
+  if(!cNotifs.length){el.innerHTML='<div class="empty-state"><div class="ei">🔔</div><h3>No notifications yet</h3><p>Book a service to get started</p></div>';return;}
+  el.innerHTML=cNotifs.map(function(n){var ic=n.type==='accepted'?'✅':n.type==='rejected'?'❌':'📋';var cls='notif-item'+(n.read?'':' unread');var oc=n.jobId?'onclick="cNotifClick('+n.jobId+')"':'';return'<div class="'+cls+'" '+oc+'><div class="nic">'+ic+'</div><div class="ntxt" style="flex:1"><h5>'+n.title+'</h5><p>'+n.msg+'</p><div class="ntime">'+n.time+'</div></div>'+(n.read?'':'<div class="notif-dot"></div>')+'</div>';}).join('');
+}
+function cNotifClick(jobId){cNotifs.forEach(function(n){if(n.jobId===jobId)n.read=true;});renderCNotifs();cOpenDetail(jobId);}
 function updateCBadges(){var b=document.getElementById('c-bell-badge');if(cNotifCount>0){b.style.display='flex';b.textContent=cNotifCount;}else{b.style.display='none';}}
-function showCToast(title,msg,ic){document.getElementById('c-toast-ic').textContent=ic||'✅';document.getElementById('c-toast-h').textContent=title;document.getElementById('c-toast-p').textContent=msg;var t=document.getElementById('c-toast');t.classList.add('show');setTimeout(function(){t.classList.remove('show');},5000);}
+function showCToast(title,msg,ic){
+  document.getElementById('c-toast-ic').textContent=ic||'✅';
+  document.getElementById('c-toast-h').textContent=title;
+  document.getElementById('c-toast-p').textContent=msg;
+  var t=document.getElementById('c-toast');t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show');},5000);
+}
 
-function kShow(id,push){var p=document.getElementById(kCur),n=document.getElementById(id);if(!n||id===kCur)return;if(push&&KTABS.indexOf(kCur)===-1)kHist.push(kCur);p.classList.remove('active');p.classList.add('out-l');setTimeout(function(){p.classList.remove('out-l')},340);n.style.transform='translateX(100%)';n.classList.add('active');requestAnimationFrame(function(){requestAnimationFrame(function(){n.style.transform=''})});kCur=id;var sc=n.querySelector('.scrl');if(sc)sc.scrollTop=0;}
-function kGoTo(id){kShow(id,true);}
-function kGoBack(){if(!kHist.length){kGoTo('k-dash');return;}var prev=kHist.pop();var c=document.getElementById(kCur),t=document.getElementById(prev);c.classList.remove('active');c.style.transform='translateX(100%)';setTimeout(function(){c.style.transform=''},340);t.style.transform='translateX(-22%)';t.classList.add('active');requestAnimationFrame(function(){requestAnimationFrame(function(){t.style.transform=''})});kCur=prev;}
-function kSwNav(id,btn){KTABS.forEach(function(s){var el=document.getElementById(s);if(el){el.classList.remove('active','out-l');el.style.transform=''}});document.querySelectorAll('#kps .bot-nav .nav-it').forEach(function(x){x.classList.remove('active')});if(btn)btn.classList.add('active');document.getElementById(id).classList.add('active');kCur=id;kHist=[];if(id==='k-jobs')renderKJobs();if(id==='k-notifs'){kNotifCount=0;updateKBadges();renderKNotifs();}}
-function kLogin(){kLoggedIn=true;kShow('k-dash',false);}
-function kLogout(){kLoggedIn=false;kShow('k-login',false);}
+// ===== OWNER NAV =====
+function oShow(id,push){
+  var p=document.getElementById(oCur),n=document.getElementById(id);
+  if(!n||id===oCur)return;
+  if(push&&OTABS.indexOf(oCur)===-1)oHist.push(oCur);
+  p.classList.remove('active');p.classList.add('out-l');
+  setTimeout(function(){p.classList.remove('out-l');},340);
+  n.style.transform='translateX(100%)';n.classList.add('active');
+  requestAnimationFrame(function(){requestAnimationFrame(function(){n.style.transform='';});});
+  oCur=id;var sc=n.querySelector('.scrl');if(sc)sc.scrollTop=0;
+}
+function oGoTo(id){oShow(id,true);}
+function oGoBack(){
+  if(!oHist.length){oGoTo('o-dash');return;}
+  var prev=oHist.pop();
+  var c=document.getElementById(oCur),t=document.getElementById(prev);
+  c.classList.remove('active');c.style.transform='translateX(100%)';
+  setTimeout(function(){c.style.transform='';},340);
+  t.style.transform='translateX(-22%)';t.classList.add('active');
+  requestAnimationFrame(function(){requestAnimationFrame(function(){t.style.transform='';});});
+  oCur=prev;
+}
+function oSwNav(id,btn){
+  OTABS.forEach(function(s){var el=document.getElementById(s);if(el){el.classList.remove('active','out-l');el.style.transform='';}});
+  document.querySelectorAll('#ops .em-bot-nav .nav-it').forEach(function(x){x.classList.remove('active');});
+  if(btn)btn.classList.add('active');
+  document.getElementById(id).classList.add('active');
+  oCur=id;oHist=[];
+  if(id==='o-jobs')renderOJobs();
+  if(id==='o-notifs'){oNotifCount=0;updateOBadges();renderONotifs();}
+  if(id==='o-dash')renderODash();
+  if(id==='o-income')updateOIncome();
+}
 
-function renderKDash(){var newJobs=jobs.filter(function(j){return j.status==='pending';});document.getElementById('k-stat-new').textContent=newJobs.length;document.getElementById('k-stat-acc').textContent=jobs.filter(function(j){return j.status==='accepted';}).length;if(document.getElementById('k-p-acc'))document.getElementById('k-p-acc').textContent=jobs.filter(function(j){return j.status==='accepted';}).length;var el=document.getElementById('k-dash-jobs');if(!newJobs.length){el.innerHTML='<div style="padding:6px 14px 12px;font-size:.66rem;color:var(--neutral)">No new jobs. They appear when clients book.</div>';return;}el.innerHTML=newJobs.slice(0,2).map(function(j){return '<div class="job-card new-job clickable" onclick="kOpenJobDetail('+j.id+')"><div class="job-top"><div class="job-ic">'+j.emoji+'</div><div class="job-info"><h4>'+j.service+'</h4><p>'+j.freq+' · '+j.rooms+' room'+(j.rooms>1?'s':'')+'</p></div><span class="pill pill-new">New</span></div><div class="job-meta"><div class="job-meta-item"><div class="lbl">Client</div><div class="val">'+j.name+'</div></div><div class="job-meta-item"><div class="lbl">Date</div><div class="val">'+(j.date?fmtDate(j.date):'TBC')+'</div></div><div class="job-meta-item"><div class="lbl">Time</div><div class="val">'+(j.time||'TBC')+'</div></div><div class="job-meta-item"><div class="lbl">Zone</div><div class="val">Dubai</div></div></div><div class="tap-hint">Tap to view full details & accept</div></div>';}).join('');}
-function renderKJobs(){var el=document.getElementById('k-jobs-list');if(!jobs.length){el.innerHTML='<div style="padding:48px 20px;text-align:center"><div style="font-size:38px;opacity:.3">📋</div><div style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:.88rem;font-weight:700;color:var(--slate);margin-top:10px">No jobs yet</div><div style="font-size:.65rem;color:var(--neutral);margin-top:4px">Jobs appear when clients book</div></div>';return;}el.innerHTML=jobs.map(function(j){var stPill=j.status==='accepted'?'<span class="pill pill-acc">Accepted</span>':j.status==='rejected'?'<span class="pill pill-rej">Declined</span>':'<span class="pill pill-new">New</span>';return '<div class="job-card clickable" onclick="kOpenJobDetail('+j.id+')" style="'+(j.status==='pending'?'border-color:rgba(8,145,178,.2);background:var(--teal-xs)':'')+'"><div class="job-top"><div class="job-ic">'+j.emoji+'</div><div class="job-info"><h4>'+j.service+'</h4><p>'+j.freq+' · '+j.name+'</p></div>'+stPill+'</div><div class="job-meta"><div class="job-meta-item"><div class="lbl">Date</div><div class="val">'+(j.date?fmtDate(j.date):'TBC')+'</div></div><div class="job-meta-item"><div class="lbl">Address</div><div class="val">'+j.addr.substring(0,20)+'</div></div></div><div class="tap-hint">Tap for full details'+(j.status==='pending'?' & actions':'')+'</div></div>';}).join('');}
-function renderKNotifs(){var el=document.getElementById('k-notif-list');if(!kNotifs.length){el.innerHTML='<div style="padding:48px 20px;text-align:center"><div style="font-size:38px;opacity:.3">🔔</div><div style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:.88rem;font-weight:700;color:var(--slate);margin-top:10px">No alerts yet</div></div>';return;}el.innerHTML=kNotifs.map(function(n){var ic=n.type==='new'?'📋':'✅';var cls='cl-notif-item'+(n.read?'':' unread');var onclick=n.jobId?'onclick="kNotifClick('+n.jobId+')"':'';return '<div class="'+cls+'" '+onclick+'><div class="nic">'+ic+'</div><div class="ntxt" style="flex:1"><h5>'+n.title+'</h5><p>'+n.msg+'</p><div class="ntime">'+n.time+'</div></div>'+(n.read?'':'<div class="notif-dot" style="background:var(--teal-d)"></div>')+'</div>';}).join('');}
-function kNotifClick(jobId){kNotifs.forEach(function(n){if(n.jobId===jobId)n.read=true;});renderKNotifs();kOpenJobDetail(jobId);}
-function kOpenJobDetail(jobId){var j=jobs.find(function(x){return x.id===jobId;});if(!j)return;document.getElementById('kdet-em').textContent=j.emoji;document.getElementById('kdet-name').textContent=j.service;document.getElementById('kdet-sub').textContent=j.freq+' · '+j.rooms+' Room'+(j.rooms>1?'s':'')+(j.date?' · '+fmtDate(j.date):'');var sr=document.getElementById('kdet-status-row');if(j.status==='accepted'){sr.innerHTML='<div style="background:var(--green-xs);border:1px solid rgba(5,150,105,.15);border-radius:var(--radius);padding:10px 13px;margin:12px 14px 0;display:flex;align-items:center;gap:8px"><span style="font-size:17px">✅</span><div><div style="font-size:.67rem;font-weight:600;color:var(--green)">You accepted this job</div><div style="font-size:.57rem;color:var(--neutral);margin-top:1px">Client has been notified</div></div></div>';}else if(j.status==='rejected'){sr.innerHTML='<div style="background:var(--red-xs);border:1px solid rgba(220,38,38,.12);border-radius:var(--radius);padding:10px 13px;margin:12px 14px 0;display:flex;align-items:center;gap:8px"><span style="font-size:17px">❌</span><div><div style="font-size:.67rem;font-weight:600;color:var(--red)">You declined this job</div><div style="font-size:.57rem;color:var(--neutral);margin-top:1px">Client has been notified</div></div></div>';}else{sr.innerHTML='<div style="background:var(--amber-l);border:1px solid rgba(217,119,6,.15);border-radius:var(--radius);padding:10px 13px;margin:12px 14px 0;display:flex;align-items:center;gap:8px"><span style="font-size:17px">⏳</span><div><div style="font-size:.67rem;font-weight:600;color:var(--amber)">Awaiting your response</div><div style="font-size:.57rem;color:var(--neutral);margin-top:1px">Accept or decline below</div></div></div>';}document.getElementById('kdet-info').innerHTML=mkKRow('Date',(j.date?fmtDate(j.date):'TBC'))+mkKRow('Time',(j.time||'TBC'))+mkKRow('Service',j.emoji+' '+j.service)+mkKRow('Frequency',j.freq)+mkKRow('Rooms',j.rooms+' Room'+(j.rooms>1?'s':''))+(j.notes?mkKRow('Notes',j.notes):'');document.getElementById('kdet-client').innerHTML=mkKRow('Name',j.name)+mkKRow('Phone',j.phone)+mkKRow('Address',j.addr);var act=document.getElementById('kdet-actions');if(j.status==='pending'){act.innerHTML='<div style="font-size:.6rem;font-weight:600;color:var(--neutral);text-transform:uppercase;letter-spacing:.5px;margin-bottom:9px;display:flex;align-items:center;gap:6px"><span style="display:block;width:3px;height:11px;background:var(--teal-l);border-radius:2px"></span>Your Decision</div><div style="display:flex;gap:9px"><button class="acc-btn" style="font-size:.76rem;padding:12px" onclick="kAccept('+j.id+')">✓ Accept Job</button><button class="rej-btn" style="font-size:.76rem;padding:12px" onclick="kReject('+j.id+')">✗ Decline</button></div><div style="font-size:.58rem;color:var(--neutral-l);text-align:center;margin-top:8px">Client is notified immediately once accepted.</div>';}else{act.innerHTML='<button style="width:100%;background:var(--teal-xs);border:1px solid rgba(8,145,178,.15);border-radius:var(--radius-sm);padding:11px;font-family:\'DM Sans\',sans-serif;font-size:.72rem;font-weight:500;color:var(--teal-d);cursor:pointer" onclick="kGoBack()">← Back to Jobs</button>';}kGoTo('k-job-detail');}
-function kAccept(jobId){var j=jobs.find(function(x){return x.id===jobId;});if(!j)return;j.status='accepted';j.cleaner='MD Rashid';kNewCount=Math.max(0,kNewCount-1);updateKBadges();renderKDash();renderKJobs();var sr=document.getElementById('kdet-status-row');sr.innerHTML='<div style="background:var(--green-xs);border:1px solid rgba(5,150,105,.15);border-radius:var(--radius);padding:10px 13px;margin:12px 14px 0;display:flex;align-items:center;gap:8px"><span style="font-size:17px">✅</span><div><div style="font-size:.67rem;font-weight:600;color:var(--green)">You accepted this job</div><div style="font-size:.57rem;color:var(--neutral);margin-top:1px">Client has been notified</div></div></div>';document.getElementById('kdet-actions').innerHTML='<div style="background:var(--green-xs);border:1px solid rgba(5,150,105,.12);border-radius:var(--radius-sm);padding:11px 13px;text-align:center;font-size:.68rem;font-weight:600;color:var(--green)">✅ Job accepted successfully!</div>';cNotifs.unshift({type:'accepted',title:'Cleaner Assigned!',msg:'MD Rashid confirmed your '+j.service+' on '+(j.date?fmtDate(j.date):'the scheduled date')+'.',time:'Just now',jobId:j.id,read:false});cNotifCount++;updateCBadges();renderCBookings();renderCHomeRecent();renderCNotifs();showCToast('Cleaner Confirmed!','MD Rashid accepted your '+j.service+'.','✅');if(aLoggedIn){aNotifs.unshift({type:'accepted',title:'Job Accepted',msg:'Rashid accepted '+j.emoji+' '+j.service+' for '+j.name,time:'Just now',jobId:j.id,read:false});updateABadges();renderADash();renderABookings();}if(cCur==='c-bk-detail')cOpenDetail(j.id);}
-function kReject(jobId){var j=jobs.find(function(x){return x.id===jobId;});if(!j)return;j.status='rejected';kNewCount=Math.max(0,kNewCount-1);updateKBadges();renderKDash();renderKJobs();document.getElementById('kdet-status-row').innerHTML='<div style="background:var(--red-xs);border:1px solid rgba(220,38,38,.12);border-radius:var(--radius);padding:10px 13px;margin:12px 14px 0;display:flex;align-items:center;gap:8px"><span style="font-size:17px">❌</span><div><div style="font-size:.67rem;font-weight:600;color:var(--red)">You declined this job</div><div style="font-size:.57rem;color:var(--neutral);margin-top:1px">Client has been notified</div></div></div>';document.getElementById('kdet-actions').innerHTML='<div style="background:var(--red-xs);border:1px solid rgba(220,38,38,.1);border-radius:var(--radius-sm);padding:11px 13px;text-align:center;font-size:.68rem;font-weight:600;color:var(--red)">Job declined.</div>';cNotifs.unshift({type:'rejected',title:'Finding Another Cleaner',msg:'Your '+j.service+' has been passed to another cleaner.',time:'Just now',jobId:j.id,read:false});cNotifCount++;updateCBadges();renderCBookings();renderCHomeRecent();renderCNotifs();showCToast('Reassigning Cleaner','We\'re finding another cleaner for your '+j.service+'.','🔄');if(aLoggedIn){aNotifs.unshift({type:'rejected',title:'Job Declined',msg:'Rashid declined '+j.emoji+' '+j.service+' for '+j.name+'. Needs reassignment.',time:'Just now',jobId:j.id,read:false});updateABadges();renderADash();renderABookings();}if(cCur==='c-bk-detail')cOpenDetail(j.id);}
-function updateKBadges(){['k-hdr-badge','k-bell-badge'].forEach(function(id){var e=document.getElementById(id);if(e){if(kNotifCount>0){e.style.display='flex';e.textContent=kNotifCount;}else{e.style.display='none';}}});['k-jobs-badge','k-jobs-badge2'].forEach(function(id){var e=document.getElementById(id);if(e){if(kNewCount>0){e.style.display='flex';e.textContent=kNewCount;}else{e.style.display='none';}}});}
-function showKToast(txt){document.getElementById('k-toast-p').textContent=txt;var t=document.getElementById('k-toast');t.classList.add('show');setTimeout(function(){t.classList.remove('show');},5500);}
+// ===== OWNER RENDERS =====
+function renderODash(){
+  var pend=jobs.filter(function(j){return j.status==='pending';});
+  var accN=jobs.filter(function(j){return j.status==='accepted';}).length;
+  document.getElementById('o-earn-pend').textContent=pend.length;
+  var el=document.getElementById('o-dash-jobs');
+  if(!pend.length){el.innerHTML='<div style="padding:6px 14px 8px;font-size:.66rem;color:var(--neutral)">No new jobs. They appear when clients book.</div>';}
+  else{
+    el.innerHTML=pend.slice(0,2).map(function(j){
+      return'<div class="ow-job new clickable" onclick="oOpenJobDetail('+j.id+')"><div class="ow-job-top"><div class="ow-job-ic">'+j.emoji+'</div><div class="ow-job-info" style="flex:1"><h4>'+j.service+'</h4><p>'+j.freq+' · '+j.rooms+' room'+(j.rooms>1?'s':'')+'</p></div><span class="pill pill-new">New</span></div><div class="ow-job-meta"><div class="ow-meta-item"><div class="lbl">Client</div><div class="val">'+j.name+'</div></div><div class="ow-meta-item"><div class="lbl">Date</div><div class="val">'+(j.date?fmtDate(j.date):'TBC')+'</div></div><div class="ow-meta-item"><div class="lbl">Time</div><div class="val">'+(j.time||'TBC')+'</div></div><div class="ow-meta-item"><div class="lbl">Rooms</div><div class="val">'+j.rooms+'</div></div></div><div style="font-size:.57rem;color:var(--neutral-l);text-align:center;font-style:italic;margin-top:2px">Tap to view & accept</div></div>';
+    }).join('');
+  }
+  var days=['SUN','MON','TUE','WED','THU','FRI','SAT'];
+  var acc=jobs.filter(function(j){return j.status==='accepted';});
+  var sch='<div class="sched-card"><div class="sched-date"><div class="sched-day">MON</div><div class="sched-num">27</div></div><div class="sched-info"><h4>Villa Deep Cleaning</h4><p>14 Maple Street · 9:00 AM</p></div><span class="pill pill-acc">Confirmed</span></div>';
+  acc.forEach(function(j){
+    var d=j.date?new Date(j.date):null;
+    sch+='<div class="sched-card"><div class="sched-date"><div class="sched-day">'+(d?days[d.getDay()]:'TBC')+'</div><div class="sched-num">'+(d?d.getDate():'—')+'</div></div><div class="sched-info"><h4>'+j.service+'</h4><p>'+j.addr.substring(0,22)+' · '+(j.time||'TBC')+'</p></div><span class="pill pill-acc">Confirmed</span></div>';
+  });
+  document.getElementById('o-dash-schedule').innerHTML=sch;
+}
+function renderOJobs(){
+  var el=document.getElementById('o-jobs-list');
+  if(!jobs.length){el.innerHTML='<div class="empty-state"><div class="ei">📋</div><h3>No jobs yet</h3><p>Jobs appear when clients book</p></div>';return;}
+  el.innerHTML=jobs.map(function(j){
+    var stPill=j.status==='accepted'?'<span class="pill pill-acc">Accepted</span>':j.status==='rejected'?'<span class="pill pill-rej">Declined</span>':'<span class="pill pill-new">New</span>';
+    return'<div class="ow-job clickable'+(j.status==='pending'?' new':'')+'" onclick="oOpenJobDetail('+j.id+')"><div class="ow-job-top"><div class="ow-job-ic">'+j.emoji+'</div><div class="ow-job-info" style="flex:1"><h4>'+j.service+'</h4><p>'+j.freq+' · '+j.name+'</p></div>'+stPill+'</div><div class="ow-job-meta"><div class="ow-meta-item"><div class="lbl">Date</div><div class="val">'+(j.date?fmtDate(j.date):'TBC')+'</div></div><div class="ow-meta-item"><div class="lbl">Address</div><div class="val">'+j.addr.substring(0,22)+'</div></div></div><div style="font-size:.57rem;color:var(--neutral-l);text-align:center;font-style:italic;margin-top:2px">Tap for full details'+(j.status==='pending'?' & actions':'')+'</div></div>';
+  }).join('');
+}
+function renderONotifs(){
+  var el=document.getElementById('o-notif-list');
+  if(!oNotifs.length){el.innerHTML='<div class="empty-state"><div class="ei">🔔</div><h3>No alerts yet</h3><p>New job alerts will appear here</p></div>';return;}
+  el.innerHTML=oNotifs.map(function(n){var ic=n.type==='new'?'📋':'✅';var cls='ow-notif'+(n.read?'':' unread');var oc=n.jobId?'onclick="oNotifClick('+n.jobId+')"':'';return'<div class="'+cls+'" '+oc+'><div class="nic">'+ic+'</div><div class="ntxt" style="flex:1"><h5>'+n.title+'</h5><p>'+n.msg+'</p><div class="ntime">'+n.time+'</div></div>'+(n.read?'':'<div class="ow-notif-dot"></div>')+'</div>';}).join('');
+}
+function oNotifClick(jobId){oNotifs.forEach(function(n){if(n.jobId===jobId)n.read=true;});renderONotifs();oOpenJobDetail(jobId);}
+function updateOIncome(){
+  var accN=jobs.filter(function(j){return j.status==='accepted';}).length;
+  var pendN=jobs.filter(function(j){return j.status==='pending';}).length;
+  var earned=oTotalEarnings+(accN*80);
+  document.getElementById('o-earn-today').textContent=accN>0?'$'+(accN*80):'$0';
+  document.getElementById('o-earn-week').textContent='$'+(240+accN*80);
+  document.getElementById('o-earn-pend').textContent=pendN;
+  document.getElementById('o-income-total').textContent='$'+(240+accN*80);
+  document.getElementById('o-income-sub').textContent=(3+accN)+' completed jobs';
+  if(document.getElementById('o-inc-acc'))document.getElementById('o-inc-acc').textContent=accN;
+  if(document.getElementById('o-inc-pend'))document.getElementById('o-inc-pend').textContent=pendN;
+  // Add accepted jobs to income list
+  var accJobs=jobs.filter(function(j){return j.status==='accepted';});
+  var base='<div class="income-item"><div class="income-ic">🏡</div><div class="income-info"><h4>Villa Deep Cleaning</h4><p>Mon 27 · 9:00 AM · 3 rooms</p></div><div class="income-amt">$80</div></div><div class="income-item"><div class="income-ic">🏠</div><div class="income-info"><h4>Apartment Cleaning</h4><p>Fri 24 · 11:00 AM · 2 rooms</p></div><div class="income-amt">$60</div></div><div class="income-item"><div class="income-ic">🏢</div><div class="income-info"><h4>Office Cleaning</h4><p>Wed 22 · 8:00 AM · 4 rooms</p></div><div class="income-amt">$100</div></div>';
+  var extra=accJobs.map(function(j){return'<div class="income-item"><div class="income-ic">'+j.emoji+'</div><div class="income-info"><h4>'+j.service+'</h4><p>'+(j.date?fmtDate(j.date):'TBC')+' · '+(j.time||'TBC')+'</p></div><div class="income-amt">$80</div></div>';}).join('');
+  document.getElementById('o-income-list').innerHTML=extra+base;
+}
+function oOpenJobDetail(jobId){
+  var j=jobs.find(function(x){return x.id===jobId;});if(!j)return;
+  document.getElementById('odet-em').textContent=j.emoji;
+  document.getElementById('odet-name').textContent=j.service;
+  document.getElementById('odet-sub').textContent=j.freq+' · '+j.rooms+' Room'+(j.rooms>1?'s':'')+(j.date?' · '+fmtDate(j.date):'');
+  var sr=document.getElementById('odet-status-row');
+  if(j.status==='accepted'){sr.innerHTML='<div style="background:var(--green-xs);border:1px solid rgba(5,150,105,.15);border-radius:var(--radius);padding:10px 13px;margin:12px 14px 0;display:flex;align-items:center;gap:8px"><span style="font-size:17px">✅</span><div><div style="font-size:.67rem;font-weight:600;color:var(--green)">You accepted this job</div><div style="font-size:.57rem;color:var(--neutral);margin-top:1px">Client has been notified</div></div></div>';}
+  else if(j.status==='rejected'){sr.innerHTML='<div style="background:var(--red-xs);border:1px solid rgba(220,38,38,.12);border-radius:var(--radius);padding:10px 13px;margin:12px 14px 0;display:flex;align-items:center;gap:8px"><span style="font-size:17px">❌</span><div><div style="font-size:.67rem;font-weight:600;color:var(--red)">You declined this job</div><div style="font-size:.57rem;color:var(--neutral);margin-top:1px">Client has been notified</div></div></div>';}
+  else{sr.innerHTML='<div style="background:var(--amber-xs);border:1px solid rgba(217,119,6,.15);border-radius:var(--radius);padding:10px 13px;margin:12px 14px 0;display:flex;align-items:center;gap:8px"><span style="font-size:17px">⏳</span><div><div style="font-size:.67rem;font-weight:600;color:var(--amber)">Awaiting your response</div><div style="font-size:.57rem;color:var(--neutral);margin-top:1px">Accept or decline below</div></div></div>';}
+  document.getElementById('odet-info').innerHTML=mkOwRow('Date',(j.date?fmtDate(j.date):'TBC'))+mkOwRow('Time',(j.time||'TBC'))+mkOwRow('Service',j.emoji+' '+j.service)+mkOwRow('Frequency',j.freq)+mkOwRow('Rooms',j.rooms+' Room'+(j.rooms>1?'s':''))+(j.notes?mkOwRow('Notes',j.notes):'');
+  document.getElementById('odet-client').innerHTML=mkOwRow('Name',j.name)+mkOwRow('Phone',j.phone)+mkOwRow('Address',j.addr);
+  var act=document.getElementById('odet-actions');
+  if(j.status==='pending'){
+    act.innerHTML='<div style="font-size:.6rem;font-weight:600;color:var(--neutral);text-transform:uppercase;letter-spacing:.5px;margin-bottom:9px;display:flex;align-items:center;gap:6px"><span style="display:block;width:3px;height:11px;background:var(--emerald-l);border-radius:2px"></span>Your Decision</div><div class="ow-actions"><button class="ow-acc" onclick="oAccept('+j.id+')">✓ Accept Job</button><button class="ow-rej" onclick="oReject('+j.id+')">✗ Decline</button></div><div style="font-size:.58rem;color:var(--neutral-l);text-align:center;margin-top:8px">Client is notified immediately once accepted.</div>';
+  }else{
+    act.innerHTML='<button style="width:100%;background:var(--emerald-xs);border:1px solid rgba(5,150,105,.15);border-radius:var(--radius-sm);padding:11px;font-family:\'DM Sans\',sans-serif;font-size:.72rem;font-weight:500;color:var(--emerald-d);cursor:pointer" onclick="oGoBack()">← Back to Jobs</button>';
+  }
+  oGoTo('o-job-detail');
+}
+function oAccept(jobId){
+  var j=jobs.find(function(x){return x.id===jobId;});if(!j)return;
+  j.status='accepted';
+  oPendingCount=Math.max(0,oPendingCount-1);
+  updateOBadges();renderODash();renderOJobs();updateOIncome();
+  document.getElementById('odet-status-row').innerHTML='<div style="background:var(--green-xs);border:1px solid rgba(5,150,105,.15);border-radius:var(--radius);padding:10px 13px;margin:12px 14px 0;display:flex;align-items:center;gap:8px"><span style="font-size:17px">✅</span><div><div style="font-size:.67rem;font-weight:600;color:var(--green)">You accepted this job</div><div style="font-size:.57rem;color:var(--neutral);margin-top:1px">Client has been notified</div></div></div>';
+  document.getElementById('odet-actions').innerHTML='<div style="background:var(--green-xs);border:1px solid rgba(5,150,105,.12);border-radius:var(--radius-sm);padding:11px 13px;text-align:center;font-size:.68rem;font-weight:600;color:var(--green)">✅ Job accepted successfully!</div><button style="width:100%;background:var(--emerald-xs);border:1px solid rgba(5,150,105,.15);border-radius:var(--radius-sm);padding:11px;font-family:\'DM Sans\',sans-serif;font-size:.72rem;font-weight:500;color:var(--emerald-d);cursor:pointer;margin-top:8px" onclick="oGoBack()">← Back to Jobs</button>';
+  // Notify client
+  cNotifs.unshift({type:'accepted',title:'Cleaner Confirmed! 🎉',msg:'Alex Johnson confirmed your '+j.service+' on '+(j.date?fmtDate(j.date):'the scheduled date')+'.',time:'Just now',jobId:j.id,read:false});
+  cNotifCount++;updateCBadges();renderCBookings();renderCHomeRecent();renderCNotifs();
+  showCToast('Booking Confirmed!','Alex accepted your '+j.service+'. See you soon!','✅');
+  if(cCur==='c-bk-detail')cOpenDetail(j.id);
+}
+function oReject(jobId){
+  var j=jobs.find(function(x){return x.id===jobId;});if(!j)return;
+  j.status='rejected';
+  oPendingCount=Math.max(0,oPendingCount-1);
+  updateOBadges();renderODash();renderOJobs();updateOIncome();
+  document.getElementById('odet-status-row').innerHTML='<div style="background:var(--red-xs);border:1px solid rgba(220,38,38,.12);border-radius:var(--radius);padding:10px 13px;margin:12px 14px 0;display:flex;align-items:center;gap:8px"><span style="font-size:17px">❌</span><div><div style="font-size:.67rem;font-weight:600;color:var(--red)">You declined this job</div><div style="font-size:.57rem;color:var(--neutral);margin-top:1px">Client has been notified</div></div></div>';
+  document.getElementById('odet-actions').innerHTML='<div style="background:var(--red-xs);border:1px solid rgba(220,38,38,.1);border-radius:var(--radius-sm);padding:11px 13px;text-align:center;font-size:.68rem;font-weight:600;color:var(--red)">Job declined.</div><button style="width:100%;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px;font-family:\'DM Sans\',sans-serif;font-size:.72rem;font-weight:500;color:var(--neutral);cursor:pointer;margin-top:8px" onclick="oGoBack()">← Back to Jobs</button>';
+  cNotifs.unshift({type:'rejected',title:'Booking Unavailable',msg:'Alex is unavailable for your '+j.service+'. Please contact him directly.',time:'Just now',jobId:j.id,read:false});
+  cNotifCount++;updateCBadges();renderCBookings();renderCHomeRecent();renderCNotifs();
+  showCToast('Unavailable','Alex is unable to take this job. Please call to reschedule.','📞');
+  if(cCur==='c-bk-detail')cOpenDetail(j.id);
+}
+function updateOBadges(){
+  ['o-bell-badge'].forEach(function(id){var e=document.getElementById(id);if(e){if(oNotifCount>0){e.style.display='flex';e.textContent=oNotifCount;}else{e.style.display='none';}}});
+  ['o-jobs-badge','o-jobs-badge2'].forEach(function(id){var e=document.getElementById(id);if(e){if(oPendingCount>0){e.style.display='flex';e.textContent=oPendingCount;}else{e.style.display='none';}}});
+}
+function showOToast(txt){
+  document.getElementById('o-toast-p').textContent=txt;
+  var t=document.getElementById('o-toast');t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show');},5500);
+}
 
-function aShow(id,push){var p=document.getElementById(aCur),n=document.getElementById(id);if(!n||id===aCur)return;if(push&&ATABS.indexOf(aCur)===-1)aHist.push(aCur);p.classList.remove('active');p.classList.add('out-l');setTimeout(function(){p.classList.remove('out-l')},340);n.style.transform='translateX(100%)';n.classList.add('active');requestAnimationFrame(function(){requestAnimationFrame(function(){n.style.transform=''})});aCur=id;var sc=n.querySelector('.scrl');if(sc)sc.scrollTop=0;}
-function aGoTo(id){aShow(id,true);}
-function aGoBack(){if(!aHist.length){aGoTo('a-dash');return;}var prev=aHist.pop();var c=document.getElementById(aCur),t=document.getElementById(prev);c.classList.remove('active');c.style.transform='translateX(100%)';setTimeout(function(){c.style.transform=''},340);t.style.transform='translateX(-22%)';t.classList.add('active');requestAnimationFrame(function(){requestAnimationFrame(function(){t.style.transform=''})});aCur=prev;}
-function aSwNav(id,btn){ATABS.forEach(function(s){var el=document.getElementById(s);if(el){el.classList.remove('active','out-l');el.style.transform=''}});document.querySelectorAll('#aps .bot-nav').forEach(function(nav){nav.querySelectorAll('.nav-it').forEach(function(x){x.classList.remove('active')})});if(btn)btn.classList.add('active');document.getElementById(id).classList.add('active');aCur=id;aHist=[];if(id==='a-bookings'){aNotifCount=0;updateABadges();renderABookings();}}
-function aLogin(){aLoggedIn=true;aShow('a-dash',false);}
-function aLogout(){aLoggedIn=false;aShow('a-login',false);}
-
-function renderADash(){document.getElementById('a-total-bk').textContent=jobs.length;document.getElementById('a-pending-bk').textContent=jobs.filter(function(j){return j.status==='pending';}).length;document.getElementById('a-acc-bk').textContent=jobs.filter(function(j){return j.status==='accepted';}).length;var el=document.getElementById('a-recent-bk');if(!jobs.length){el.innerHTML='<div style="padding:5px 14px 12px;font-size:.66rem;color:var(--neutral)">No bookings yet.</div>';return;}el.innerHTML=jobs.slice(0,3).map(function(j){return '<div class="adm-booking-row" onclick="aOpenDetail('+j.id+')"><div class="adm-bk-ic">'+j.emoji+'</div><div class="adm-bk-info"><h4>'+j.service+'</h4><p>'+j.name+' · '+(j.date?fmtDate(j.date):'TBC')+'</p></div>'+statusPillC(j.status)+'</div>';}).join('');}
-function renderABookings(){var el=document.getElementById('a-bk-list');if(!jobs.length){el.innerHTML='<div style="padding:48px 20px;text-align:center"><div style="font-size:38px;opacity:.3">📋</div><div style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:.88rem;font-weight:700;color:var(--slate);margin-top:10px">No bookings yet</div></div>';return;}el.innerHTML=jobs.map(function(j){return '<div class="adm-booking-row" onclick="aOpenDetail('+j.id+')" style="align-items:flex-start;flex-direction:column;gap:7px"><div style="display:flex;align-items:center;gap:9px;width:100%"><div class="adm-bk-ic">'+j.emoji+'</div><div class="adm-bk-info" style="flex:1"><h4>'+j.service+'</h4><p>'+j.name+' · '+j.phone+'</p></div>'+statusPillC(j.status)+'</div><div style="font-size:.56rem;color:var(--neutral-l);padding-left:43px">'+(j.date?fmtDate(j.date):'-')+(j.time?' at '+j.time:'')+(j.addr?' · '+j.addr.substring(0,22):'')+'</div></div>';}).join('');}
-function aOpenDetail(jobId){var j=jobs.find(function(x){return x.id===jobId;});if(!j)return;document.getElementById('adet-em').textContent=j.emoji;document.getElementById('adet-name').textContent=j.service;document.getElementById('adet-sub').textContent=j.freq+' · '+j.rooms+' Room'+(j.rooms>1?'s':'')+(j.date?' · '+fmtDate(j.date):'');var sr=document.getElementById('adet-status-row');var stBg=j.status==='accepted'?'var(--green-xs)':j.status==='rejected'?'var(--red-xs)':'var(--amber-l)';var stBd=j.status==='accepted'?'rgba(5,150,105,.15)':j.status==='rejected'?'rgba(220,38,38,.12)':'rgba(217,119,6,.15)';var stIc=j.status==='accepted'?'✅':j.status==='rejected'?'❌':'⏳';var stClr=j.status==='accepted'?'var(--green)':j.status==='rejected'?'var(--red)':'var(--amber)';var stTxt=j.status==='accepted'?'Accepted by MD Rashid':j.status==='rejected'?'Declined — Needs Reassignment':'Pending · Awaiting cleaner response';sr.innerHTML='<div style="background:'+stBg+';border:1px solid '+stBd+';border-radius:var(--radius);padding:10px 13px;margin:12px 14px 0;display:flex;align-items:center;gap:8px"><span style="font-size:17px">'+stIc+'</span><div style="font-size:.66rem;font-weight:600;color:'+stClr+'">'+stTxt+'</div></div>';document.getElementById('adet-info').innerHTML=mkKRow('Date',(j.date?fmtDate(j.date):'TBC'))+mkKRow('Time',(j.time||'TBC'))+mkKRow('Frequency',j.freq)+mkKRow('Rooms',j.rooms+' Room'+(j.rooms>1?'s':''))+(j.notes?mkKRow('Notes',j.notes):'');document.getElementById('adet-client').innerHTML=mkKRow('Name',j.name)+mkKRow('Phone',j.phone)+mkKRow('Email',j.email)+mkKRow('Address',j.addr);document.getElementById('adet-assign').innerHTML=j.status==='accepted'?'<div style="font-size:.69rem;font-weight:600;color:var(--green)">✅ MD Rashid (#AR-007)</div><div style="font-size:.59rem;color:var(--neutral);margin-top:3px">5.0★ · Confirmed</div>':'<div style="font-size:.66rem;color:var(--neutral);margin-bottom:9px">Select a cleaner to assign:</div><div style="display:flex;flex-direction:column;gap:6px"><button onclick="aAssign('+j.id+',\'MD Rashid\')" style="background:var(--blue-xs);border:1px solid rgba(26,86,219,.15);border-radius:var(--radius-sm);padding:8px 11px;font-family:\'DM Sans\',sans-serif;font-size:.65rem;font-weight:500;color:var(--slate);cursor:pointer;text-align:left">MR · MD Rashid — Online ✓</button><button onclick="aAssign('+j.id+',\'Mohammed Anwar\')" style="background:var(--teal-xs);border:1px solid rgba(8,145,178,.12);border-radius:var(--radius-sm);padding:8px 11px;font-family:\'DM Sans\',sans-serif;font-size:.65rem;font-weight:500;color:var(--slate);cursor:pointer;text-align:left">MA · Mohammed Anwar — Online ✓</button></div>';var act=document.getElementById('adet-actions');if(j.status==='pending'){act.innerHTML='<div class="adm-action-row" style="padding:0"><button class="adm-acc" onclick="aAccept('+j.id+')">✓ Approve</button><button class="adm-rej" onclick="aReject('+j.id+')">✗ Decline</button></div>';}else{act.innerHTML='<button style="width:100%;background:var(--blue-xs);border:1px solid rgba(26,86,219,.12);border-radius:var(--radius-sm);padding:11px;font-family:\'DM Sans\',sans-serif;font-size:.72rem;font-weight:500;color:var(--blue-l);cursor:pointer" onclick="aGoBack()">← Back to Bookings</button>';}aGoTo('a-bk-detail');}
-function aAssign(jobId,name){var j=jobs.find(function(x){return x.id===jobId;});if(!j)return;j.cleaner=name;document.getElementById('adet-assign').innerHTML='<div style="font-size:.69rem;font-weight:600;color:var(--green)">✅ '+name+' assigned</div><div style="font-size:.59rem;color:var(--neutral);margin-top:3px">Cleaner has been notified</div>';}
-function aAccept(jobId){var j=jobs.find(function(x){return x.id===jobId;});if(!j)return;j.status='accepted';j.cleaner=j.cleaner||'MD Rashid';renderADash();renderABookings();document.getElementById('adet-actions').innerHTML='<div style="background:var(--green-xs);border:1px solid rgba(5,150,105,.12);border-radius:var(--radius-sm);padding:11px 13px;text-align:center;font-size:.68rem;font-weight:600;color:var(--green)">✅ Booking approved!</div>';document.getElementById('adet-status-row').innerHTML='<div style="background:var(--green-xs);border:1px solid rgba(5,150,105,.15);border-radius:var(--radius);padding:10px 13px;margin:12px 14px 0;display:flex;align-items:center;gap:8px"><span style="font-size:17px">✅</span><div style="font-size:.66rem;font-weight:600;color:var(--green)">Approved by Admin</div></div>';cNotifs.unshift({type:'accepted',title:'Booking Confirmed!',msg:'Your '+j.service+' has been confirmed by Al Rukam Clean.',time:'Just now',jobId:j.id,read:false});cNotifCount++;updateCBadges();renderCBookings();renderCHomeRecent();renderCNotifs();showCToast('Booking Confirmed!','Your '+j.service+' is confirmed by Al Rukam Clean.','✅');}
-function aReject(jobId){var j=jobs.find(function(x){return x.id===jobId;});if(!j)return;j.status='rejected';renderADash();renderABookings();document.getElementById('adet-actions').innerHTML='<div style="background:var(--red-xs);border:1px solid rgba(220,38,38,.1);border-radius:var(--radius-sm);padding:11px 13px;text-align:center;font-size:.68rem;font-weight:600;color:var(--red)">Booking declined.</div>';cNotifs.unshift({type:'rejected',title:'Booking Declined',msg:'Unfortunately we cannot fulfill your '+j.service+'. Please contact us.',time:'Just now',jobId:j.id,read:false});cNotifCount++;updateCBadges();renderCBookings();renderCHomeRecent();renderCNotifs();showCToast('Booking Declined','Please contact Al Rukam Clean to reschedule.','❌');}
-function updateABadges(){['a-badge','a-bk-badge','a-bk-badge2'].forEach(function(id){var e=document.getElementById(id);if(e){if(aNotifCount>0){e.style.display='flex';e.textContent=aNotifCount;}else{e.style.display='none';}}});}
-function showAToast(msg){document.getElementById('a-toast-h').textContent='New Booking';document.getElementById('a-toast-p').textContent=msg;var t=document.getElementById('a-toast');t.classList.add('show');setTimeout(function(){t.classList.remove('show');},5500);}
-
-renderCNotifs();renderCBookings();renderKNotifs();
+// INIT
+renderCNotifs();renderCBookings();renderONotifs();renderOJobs();
 </script>
 </body>
 </html>
